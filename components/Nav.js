@@ -43,7 +43,7 @@ export default function Nav() {
       )}
       <nav style={{ position: "sticky", top: 0, zIndex: 50, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "14px 40px", transition: "background .35s ease, box-shadow .35s ease, border-color .35s ease", borderBottom: "1px solid transparent", ...barStyle }}>
         <Link href="/" style={{ display: "flex", alignItems: "center" }}>
-          <Image src="/logo.png" alt="African Hidden Voices" width={180} height={52} style={{ height: 52, width: "auto", display: "block", mixBlendMode: "multiply" }} />
+          <Image src="/logo.png" alt="African Hidden Voices" width={320} height={90} style={{ height: 90, width: "auto", display: "block", mixBlendMode: "multiply" }} />
         </Link>
 
         <div style={{ display: "flex", alignItems: "center", gap: 26, fontFamily: "var(--font-hanken)", fontSize: "13.5px", fontWeight: 600, letterSpacing: ".04em", color: fg }} className="hidden md:flex">
