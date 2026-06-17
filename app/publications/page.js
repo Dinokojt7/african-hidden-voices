@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import Placeholder from "@/components/Placeholder";
 
 const books = [
   { title: "Restoring Africa's Spiritual Identity", subtitle: "The IMboni Tradition in Southern Africa", year: "2025", publisher: "Cambridge University Press", featured: true },
@@ -37,7 +36,9 @@ export default function Publications() {
           </Reveal>
           <div style={{ display: "grid", gridTemplateColumns: ".85fr 1.15fr", gap: 60, alignItems: "center" }}>
             <Reveal>
-              <Placeholder label={"book cover\n" + featured.title} style={{ aspectRatio: "2/3", borderRadius: 10, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)", boxShadow: "8px 12px 32px rgba(42,22,20,.15)" }} />
+              <div style={{ aspectRatio: "2/3", borderRadius: 10, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)", boxShadow: "8px 12px 32px rgba(42,22,20,.15)", background: "var(--ahv-oxblood-deep)", display: "flex", alignItems: "flex-end", padding: 28 }}>
+                <span style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 22, lineHeight: 1.3, color: "var(--ahv-cream)" }}>{featured.title}</span>
+              </div>
             </Reveal>
             <Reveal delay={120}>
               <div style={{ display: "inline-flex", background: "var(--ahv-gold-band)", borderRadius: 999, padding: "7px 16px", fontFamily: "var(--font-hanken)", fontSize: 12, fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--ahv-oxblood-deep)", marginBottom: 22 }}>{featured.publisher}</div>
@@ -62,7 +63,9 @@ export default function Publications() {
             {catalogue.map((b, i) => (
               <Reveal key={b.title} delay={i * 70}>
                 <div>
-                  <Placeholder label={"cover"} style={{ aspectRatio: "2/3", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(110,19,22,.14)", marginBottom: 18, boxShadow: "4px 6px 20px rgba(42,22,20,.1)" }} />
+                  <div style={{ aspectRatio: "2/3", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(110,19,22,.14)", marginBottom: 18, boxShadow: "4px 6px 20px rgba(42,22,20,.1)", background: "var(--ahv-oxblood)", display: "flex", alignItems: "flex-end", padding: 18 }}>
+                    <span style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 15, lineHeight: 1.3, color: "var(--ahv-cream)" }}>{b.title}</span>
+                  </div>
                   <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 6 }}>{b.year} · {b.publisher}</div>
                   <h3 style={{ fontFamily: "var(--font-spectral)", fontWeight: 600, fontSize: 18, lineHeight: 1.25, margin: "0 0 4px", color: "var(--ahv-ink)" }}>{b.title}</h3>
                   <p style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 14.5, color: "#7a635e", margin: 0 }}>{b.subtitle}</p>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Play } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import Placeholder from "@/components/Placeholder";
 
 const episodes = [
   { n: "06", title: "The Prophetic Tradition of Lesotho", duration: "48 min", guest: "Dr. Maphula Thoka" },
@@ -52,8 +51,8 @@ export default function PodcastPage() {
                   <Play size={18} fill="var(--ahv-oxblood-deep)" />Play Episode
                 </button>
               </div>
-              <div style={{ width: 280, flexShrink: 0 }}>
-                <Placeholder label="episode\nartwork" style={{ width: "100%", height: "100%", minHeight: 280 }} />
+              <div style={{ width: 280, flexShrink: 0, overflow: "hidden" }}>
+                <img src="/Screenshotcopy.jpg" alt="Podcast episode" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", minHeight: 280 }} />
               </div>
             </div>
           </Reveal>

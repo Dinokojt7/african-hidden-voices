@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { ArrowRight, Play, Search, MessageCircle, BookOpen, GraduationCap } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import Placeholder from "@/components/Placeholder";
 
 const archive = [
-  { name: "Mantsopa Anna Makhetha", dates: "1793–1908", region: "Lesotho", role: "Prophetess & Rainmaker" },
-  { name: "Mohlomi", dates: "c.1720–1815", region: "Lesotho", role: "Sage-King & Healer" },
-  { name: "Makhanda (Nxele)", dates: "c.1780–1820", region: "Eastern Cape", role: "Prophet-Warrior" },
+  { name: "Mantsopa Anna Makhetha", dates: "1793–1908", region: "Lesotho", role: "Prophetess & Rainmaker", img: "/c4copy.jpg" },
+  { name: "Mohlomi", dates: "c.1720–1815", region: "Lesotho", role: "Sage-King & Healer", img: "/Elliot.jpg" },
+  { name: "Makhanda (Nxele)", dates: "c.1780–1820", region: "Eastern Cape", role: "Prophet-Warrior", img: "/credo.jpg" },
 ];
 
 const episodes = [
@@ -64,9 +63,9 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={160}>
-            <div style={{ position: "relative", aspectRatio: "4/5", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(201,162,75,.4)", boxShadow: "0 40px 80px -30px rgba(0,0,0,.6)", background: "repeating-linear-gradient(45deg, rgba(245,231,192,.06) 0 12px, rgba(245,231,192,.11) 12px 24px), rgba(0,0,0,.18)", display: "flex", alignItems: "flex-end" }}>
-              <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "ui-monospace,Menlo,monospace", fontSize: 12, letterSpacing: ".18em", color: "rgba(245,231,192,.45)", textTransform: "uppercase" }}>Imboni · ceremonial portrait</div>
-              <div style={{ position: "relative", width: "100%", padding: 22, background: "linear-gradient(transparent, rgba(66,12,15,.85))" }}>
+            <div style={{ position: "relative", aspectRatio: "4/5", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(201,162,75,.4)", boxShadow: "0 40px 80px -30px rgba(0,0,0,.6)" }}>
+              <img src="/6june2019.png" alt="Imboni Dr. uZwi-Lezwe Radebe" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <div style={{ position: "absolute", bottom: 0, width: "100%", padding: 22, background: "linear-gradient(transparent, rgba(66,12,15,.85))" }}>
                 <div style={{ fontFamily: "var(--font-hanken)", fontSize: 11, letterSpacing: ".2em", textTransform: "uppercase", color: "var(--ahv-gold)", marginBottom: 6 }}>The Founder</div>
                 <div style={{ fontFamily: "var(--font-spectral)", fontSize: 21, lineHeight: 1.2 }}>iNkosi yamaKhosi oMoya<br />Imboni Dr. uZwi-Lezwe Radebe</div>
               </div>
@@ -129,7 +128,9 @@ export default function Home() {
       <section style={{ background: "var(--ahv-parchment-2)", color: "var(--ahv-ink)", padding: "120px 40px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: ".8fr 1.2fr", gap: 64, alignItems: "center" }}>
           <Reveal>
-            <Placeholder label={"portrait of\nthe Imboni"} style={{ aspectRatio: "3/4", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)" }} />
+            <div style={{ aspectRatio: "3/4", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)" }}>
+              <img src="/Screenshotcopy.jpg" alt="Imboni Dr. uZwi-Lezwe Radebe on SABC" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            </div>
           </Reveal>
           <Reveal delay={120}>
             <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 22 }}>The Founder</div>
@@ -162,8 +163,8 @@ export default function Home() {
             {archive.map((person) => (
               <Reveal key={person.name}>
                 <div style={{ background: "#fff", border: "1px solid rgba(110,19,22,.1)", borderRadius: 10, overflow: "hidden", boxShadow: "0 18px 36px -28px rgba(66,12,15,.4)" }}>
-                  <div style={{ aspectRatio: "4/3", background: "repeating-linear-gradient(45deg, rgba(110,19,22,.05) 0 11px, rgba(110,19,22,.09) 11px 22px), var(--ahv-parchment-2)", display: "flex", alignItems: "center", justifyContent: "center", borderBottom: "3px solid var(--ahv-gold)" }}>
-                    <span style={{ fontFamily: "ui-monospace,Menlo,monospace", fontSize: 11, letterSpacing: ".14em", color: "rgba(42,22,20,.4)", textTransform: "uppercase" }}>{person.name}</span>
+                  <div style={{ aspectRatio: "4/3", overflow: "hidden", borderBottom: "3px solid var(--ahv-gold)" }}>
+                    <img src={person.img} alt={person.name} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                   </div>
                   <div style={{ padding: "24px 24px 26px" }}>
                     <div style={{ fontFamily: "var(--font-hanken)", fontSize: 11, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 9 }}>{person.role}</div>
@@ -211,8 +212,8 @@ export default function Home() {
           </Reveal>
           <div style={{ display: "grid", gridTemplateColumns: "1.15fr .85fr", gap: 30, alignItems: "stretch" }}>
             <Reveal>
-              <div style={{ position: "relative", borderRadius: 12, overflow: "hidden", background: "repeating-linear-gradient(45deg, rgba(245,231,192,.05) 0 12px, rgba(245,231,192,.1) 12px 24px), var(--ahv-oxblood-deep)", color: "var(--ahv-cream)", minHeight: 380, display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: 40, border: "1px solid rgba(201,162,75,.25)" }}>
-                <span style={{ position: "absolute", top: 34, left: 40, fontFamily: "ui-monospace,monospace", fontSize: 11, letterSpacing: ".16em", color: "rgba(245,231,192,.4)", textTransform: "uppercase" }}>episode still</span>
+              <div style={{ position: "relative", borderRadius: 12, overflow: "hidden", background: "var(--ahv-oxblood-deep)", color: "var(--ahv-cream)", minHeight: 380, display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: 40, border: "1px solid rgba(201,162,75,.25)" }}>
+                <img src="/mbanner.jpg" alt="AHV event" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: .35, display: "block" }} />
                 <div style={{ width: 64, height: 64, borderRadius: "50%", background: "var(--ahv-gold)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 24, boxShadow: "0 12px 30px -8px rgba(0,0,0,.5)" }}>
                   <Play size={24} fill="var(--ahv-oxblood-deep)" stroke="none" />
                 </div>

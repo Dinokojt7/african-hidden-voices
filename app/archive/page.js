@@ -4,15 +4,15 @@ import Reveal from "@/components/Reveal";
 import Placeholder from "@/components/Placeholder";
 
 const people = [
-  { name: "Mantsopa Anna Makhetha", desc: "Prophet of Lesotho, 1793–1908" },
-  { name: "Simon Kimbangu", desc: "Congo spiritual leader, 1887–1951" },
-  { name: "Khotso Sethuntsa", desc: "Lesotho / Eastern Cape, 1898–1972" },
-  { name: "Isaiah Shembe", desc: "Founder of Nazareth Church, 1870–1935" },
-  { name: "Alice Lenshina", desc: "Lumpa Church, Zambia, 1920–1978" },
-  { name: "Nehemia Tile", desc: "Tembu National Church, 1850–1891" },
-  { name: "Nontetha Nkwenkwe", desc: "Xhosa prophetess, 1875–1935" },
-  { name: "Samuel Maharero", desc: "Herero spiritual leader, 1856–1923" },
-  { name: "Nongqawuse", desc: "Xhosa visionary, 1840–1898" },
+  { name: "Mantsopa Anna Makhetha", desc: "Prophet of Lesotho, 1793–1908", img: "/c4copy.jpg" },
+  { name: "Simon Kimbangu", desc: "Congo spiritual leader, 1887–1951", img: "/Elliot.jpg" },
+  { name: "Khotso Sethuntsa", desc: "Lesotho / Eastern Cape, 1898–1972", img: "/credo.jpg" },
+  { name: "Isaiah Shembe", desc: "Founder of Nazareth Church, 1870–1935", img: "/1.jpg" },
+  { name: "Alice Lenshina", desc: "Lumpa Church, Zambia, 1920–1978", img: "/Untitled-22.jpg" },
+  { name: "Nehemia Tile", desc: "Tembu National Church, 1850–1891", img: "/johanne.jpg" },
+  { name: "Nontetha Nkwenkwe", desc: "Xhosa prophetess, 1875–1935", img: "/2.jpg" },
+  { name: "Samuel Maharero", desc: "Herero spiritual leader, 1856–1923", img: "/sli3.jpg" },
+  { name: "Nongqawuse", desc: "Xhosa visionary, 1840–1898", img: "/Untitled-25.jpg" },
 ];
 
 const filters = ["All", "Southern Africa", "East Africa", "Central Africa", "Prophets", "Kings"];
@@ -57,7 +57,9 @@ export default function Archive() {
               <Reveal key={p.name} delay={i * 60}>
                 <Link href="#" style={{ display: "block", textDecoration: "none", color: "inherit" }}>
                   <div style={{ background: "var(--ahv-parchment-2)", borderRadius: 12, overflow: "hidden", border: "1px solid rgba(110,19,22,.12)", transition: "transform .2s" }}>
-                    <Placeholder label="portrait" style={{ aspectRatio: "4/3", width: "100%" }} />
+                    <div style={{ aspectRatio: "4/3", overflow: "hidden" }}>
+                      <img src={p.img} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                    </div>
                     <div style={{ padding: "20px 22px" }}>
                       <h3 style={{ fontFamily: "var(--font-spectral)", fontWeight: 600, fontSize: 20, lineHeight: 1.2, margin: "0 0 5px", color: "var(--ahv-ink)" }}>{p.name}</h3>
                       <p style={{ fontFamily: "var(--font-hanken)", fontSize: 13, color: "#7a635e", margin: 0 }}>{p.desc}</p>

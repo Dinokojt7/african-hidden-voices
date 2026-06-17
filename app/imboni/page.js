@@ -22,7 +22,9 @@ export default function Imboni() {
       <header style={{ padding: "70px 40px 84px", borderBottom: "1px solid rgba(110,19,22,.1)" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: ".9fr 1.1fr", gap: 58, alignItems: "center" }}>
           <Reveal>
-            <Placeholder label={"portrait of\nthe Imboni"} style={{ aspectRatio: "3/4", borderRadius: 12, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)" }} />
+            <div style={{ aspectRatio: "3/4", borderRadius: 12, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)" }}>
+              <img src="/Screenshotcopy.jpg" alt="Imboni Dr. uZwi-Lezwe Radebe" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            </div>
           </Reveal>
           <Reveal delay={100}>
             <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>The Founder</div>

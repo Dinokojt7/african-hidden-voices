@@ -41,7 +41,9 @@ export default function About() {
             <p style={{ fontSize: 17, lineHeight: 1.75, color: "#5e4742", margin: 0 }}>Foreign influences and the passage of time drew a cloud of doubt and uncertainty over our African trailblazers. AHV exists as a dialogue platform to assure that the voices of these gallant IImboni are no longer suppressed — and that their advisory role to our governments is revived.</p>
           </Reveal>
           <Reveal delay={120}>
-            <Placeholder label={"archival photograph\nor gathering"} style={{ aspectRatio: "4/5", borderRadius: 10, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)" }} />
+            <div style={{ aspectRatio: "4/5", borderRadius: 10, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)" }}>
+              <img src="/l1.jpg" alt="AHV gathering" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            </div>
           </Reveal>
         </div>
       </section>
@@ -96,7 +98,9 @@ export default function About() {
             {team.map((m, i) => (
               <Reveal key={m.name} delay={i * 80}>
                 <div>
-                  <Placeholder label="photo" style={{ aspectRatio: "1/1", borderRadius: 10, overflow: "hidden", border: "1px solid rgba(110,19,22,.12)", marginBottom: 16 }} />
+                  <div style={{ aspectRatio: "1/1", borderRadius: 10, overflow: "hidden", border: "1px solid rgba(110,19,22,.12)", marginBottom: 16 }}>
+                    <img src={["/9.jpg", "/sli3.jpg", "/2.jpg", "/g6.jpg"][i % 4]} alt={m.name} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  </div>
                   <h3 style={{ fontFamily: "var(--font-spectral)", fontWeight: 600, fontSize: 18, margin: "0 0 3px", color: "var(--ahv-ink)" }}>{m.name}</h3>
                   <p style={{ fontFamily: "var(--font-hanken)", fontSize: 13, color: "#7a635e", margin: 0 }}>{m.role}</p>
                 </div>

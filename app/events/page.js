@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
-import Placeholder from "@/components/Placeholder";
 
 const upcoming = [
   { date: "Dec 2025", title: "Fort Hare IKS Conference", location: "Alice, Eastern Cape", desc: "The annual Indigenous Knowledge Systems conference hosted at the University of Fort Hare — AHV returns as keynote partner." },
@@ -37,7 +36,9 @@ export default function Events() {
           </Reveal>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 54, alignItems: "center" }}>
             <Reveal>
-              <Placeholder label="event photography\nFort Hare 2025" style={{ aspectRatio: "4/3", borderRadius: 12, overflow: "hidden", border: "1px solid rgba(110,19,22,.15)" }} />
+              <div style={{ aspectRatio: "4/3", borderRadius: 12, overflow: "hidden", border: "1px solid rgba(110,19,22,.15)" }}>
+                <img src="/mbanner.jpg" alt="AHV Fort Hare Conference" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              </div>
             </Reveal>
             <Reveal delay={120}>
               <div style={{ display: "inline-flex", background: "var(--ahv-gold-band)", borderRadius: 999, padding: "7px 16px", fontFamily: "var(--font-hanken)", fontSize: 12, fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--ahv-oxblood-deep)", marginBottom: 22 }}>Dec 2025</div>
