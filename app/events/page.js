@@ -34,7 +34,7 @@ export default function Events() {
           <Reveal>
             <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 36 }}>Featured Event</div>
           </Reveal>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 54, alignItems: "center" }}>
+          <div className="r-two-col" style={{ display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 54, alignItems: "center" }}>
             <Reveal>
               <div style={{ aspectRatio: "4/3", borderRadius: 12, overflow: "hidden", border: "1px solid rgba(110,19,22,.15)" }}>
                 <img src="/mbanner.jpg" alt="AHV Fort Hare Conference" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />

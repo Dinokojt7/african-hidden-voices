@@ -3,9 +3,9 @@ import { ArrowRight, Play, Search, MessageCircle, BookOpen, GraduationCap } from
 import Reveal from "@/components/Reveal";
 
 const archive = [
-  { name: "Mantsopa Anna Makhetha", dates: "1793–1908", region: "Lesotho", role: "Prophetess & Rainmaker", img: "/c4copy.jpg" },
-  { name: "Mohlomi", dates: "c.1720–1815", region: "Lesotho", role: "Sage-King & Healer", img: "/Elliot.jpg" },
-  { name: "Makhanda (Nxele)", dates: "c.1780–1820", region: "Eastern Cape", role: "Prophet-Warrior", img: "/credo.jpg" },
+  { name: "Prophet Elliot Kamwana", dates: "c.1882–1956", region: "Malawi", role: "Prophet & Church Founder", img: "/Elliot.jpg", desc: "Elliot Kamwana was a Tonga born near Nkhata Bay on Lake Malawi in about 1882." },
+  { name: "Johanne Masowe", dates: "1914–1973", region: "Zimbabwe", role: "Prophet & Spiritual Leader", img: "/johanne.jpg", desc: "Real name Shoniwa Masedza Tandi Moyo, born 1914 in Gandanzara village, Makoni district, Eastern Zimbabwe." },
+  { name: "Prophet Vusamazulu Credo Mutwa", dates: "1921–2020", region: "KwaZulu-Natal", role: "Sangoma, Author & Elder", img: "/credo.jpg", desc: "Vusamazulu Credo Mutwa was born in 1921 in what is now known as KwaZulu-Natal." },
 ];
 
 const episodes = [
@@ -40,9 +40,10 @@ export default function Home() {
     <>
       {/* HERO */}
       <header style={{ position: "relative", background: "radial-gradient(120% 120% at 75% 0%, #5c1013 0%, var(--ahv-oxblood) 38%, var(--ahv-oxblood-deep) 100%)", color: "var(--ahv-cream)", overflow: "hidden" }}>
+        <img src="/6.jpg" alt="" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", opacity: 0.18, display: "block", pointerEvents: "none" }} />
         <div style={{ position: "absolute", inset: 0, opacity: .09, backgroundImage: "repeating-linear-gradient(135deg, rgba(245,231,192,.5) 0 1px, transparent 1px 26px)", pointerEvents: "none" }} />
         <div style={{ position: "absolute", top: -120, right: -120, width: 520, height: 520, borderRadius: "50%", background: "radial-gradient(circle, rgba(201,162,75,.18), transparent 65%)", pointerEvents: "none" }} />
-        <div style={{ position: "relative", maxWidth: 1240, margin: "0 auto", padding: "96px 40px 110px", display: "grid", gridTemplateColumns: "1.15fr .85fr", gap: 56, alignItems: "center" }}>
+        <div className="r-two-col r-pad" style={{ position: "relative", maxWidth: 1240, margin: "0 auto", padding: "96px 40px 110px", display: "grid", gridTemplateColumns: "1.15fr .85fr", gap: 56, alignItems: "center" }}>
           <Reveal>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-gold)", marginBottom: 30 }}>
               <span style={{ width: 30, height: 1, background: "var(--ahv-gold)" }} />Unmasking African Truths
@@ -126,10 +127,10 @@ export default function Home() {
 
       {/* FOUNDER */}
       <section style={{ background: "var(--ahv-parchment-2)", color: "var(--ahv-ink)", padding: "120px 40px" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: ".8fr 1.2fr", gap: 64, alignItems: "center" }}>
+        <div className="r-two-col" style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: ".8fr 1.2fr", gap: 64, alignItems: "center" }}>
           <Reveal>
             <div style={{ aspectRatio: "3/4", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)" }}>
-              <img src="/Screenshotcopy.jpg" alt="Imboni Dr. uZwi-Lezwe Radebe on SABC" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <img src="/g12.jpg" alt="Imboni Dr. uZwi-Lezwe Radebe" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
           </Reveal>
           <Reveal delay={120}>
@@ -159,7 +160,7 @@ export default function Home() {
               </Link>
             </div>
           </Reveal>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+          <div className="r-three-col" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
             {archive.map((person) => (
               <Reveal key={person.name}>
                 <div style={{ background: "#fff", border: "1px solid rgba(110,19,22,.1)", borderRadius: 10, overflow: "hidden", boxShadow: "0 18px 36px -28px rgba(66,12,15,.4)" }}>
@@ -169,7 +170,8 @@ export default function Home() {
                   <div style={{ padding: "24px 24px 26px" }}>
                     <div style={{ fontFamily: "var(--font-hanken)", fontSize: 11, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 9 }}>{person.role}</div>
                     <h3 style={{ fontFamily: "var(--font-spectral)", fontWeight: 600, fontSize: 23, margin: "0 0 6px", color: "var(--ahv-ink)" }}>{person.name}</h3>
-                    <p style={{ fontFamily: "var(--font-hanken)", fontSize: 13.5, color: "#7a635e", margin: "0 0 18px" }}>{person.dates} &nbsp;·&nbsp; {person.region}</p>
+                    <p style={{ fontFamily: "var(--font-hanken)", fontSize: 13.5, color: "#7a635e", margin: "0 0 10px" }}>{person.dates} &nbsp;·&nbsp; {person.region}</p>
+                    <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#5e4742", margin: "0 0 18px" }}>{person.desc}</p>
                     <Link href="/archive" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 13, color: "var(--ahv-crimson)" }}>
                       Read the research <ArrowRight size={14} strokeWidth={2} />
                     </Link>
@@ -210,7 +212,7 @@ export default function Home() {
               <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,40px)", lineHeight: 1.12, margin: 0, color: "var(--ahv-ink)" }}>#UnmaskingAfricanTruths, in conversation.</h2>
             </div>
           </Reveal>
-          <div style={{ display: "grid", gridTemplateColumns: "1.15fr .85fr", gap: 30, alignItems: "stretch" }}>
+          <div className="r-two-col" style={{ display: "grid", gridTemplateColumns: "1.15fr .85fr", gap: 30, alignItems: "stretch" }}>
             <Reveal>
               <div style={{ position: "relative", borderRadius: 12, overflow: "hidden", background: "var(--ahv-oxblood-deep)", color: "var(--ahv-cream)", minHeight: 380, display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: 40, border: "1px solid rgba(201,162,75,.25)" }}>
                 <img src="/mbanner.jpg" alt="AHV event" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: .35, display: "block" }} />

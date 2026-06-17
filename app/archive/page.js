@@ -4,15 +4,15 @@ import Reveal from "@/components/Reveal";
 import Placeholder from "@/components/Placeholder";
 
 const people = [
-  { name: "Mantsopa Anna Makhetha", desc: "Prophet of Lesotho, 1793–1908", img: "/c4copy.jpg" },
-  { name: "Simon Kimbangu", desc: "Congo spiritual leader, 1887–1951", img: "/Elliot.jpg" },
-  { name: "Khotso Sethuntsa", desc: "Lesotho / Eastern Cape, 1898–1972", img: "/credo.jpg" },
-  { name: "Isaiah Shembe", desc: "Founder of Nazareth Church, 1870–1935", img: "/1.jpg" },
-  { name: "Alice Lenshina", desc: "Lumpa Church, Zambia, 1920–1978", img: "/Untitled-22.jpg" },
-  { name: "Nehemia Tile", desc: "Tembu National Church, 1850–1891", img: "/johanne.jpg" },
-  { name: "Nontetha Nkwenkwe", desc: "Xhosa prophetess, 1875–1935", img: "/2.jpg" },
-  { name: "Samuel Maharero", desc: "Herero spiritual leader, 1856–1923", img: "/sli3.jpg" },
-  { name: "Nongqawuse", desc: "Xhosa visionary, 1840–1898", img: "/Untitled-25.jpg" },
+  { name: "Prophet Elliot Kamwana", desc: "Born c.1882 near Nkhata Bay, Lake Malawi. Tonga prophet and founder of the Watchtower movement in Central Africa.", img: "/Elliot.jpg" },
+  { name: "Prophet Vusamazulu Credo Mutwa", desc: "Born 1921 in KwaZulu-Natal. Renowned Zulu sangoma, author and keeper of African spiritual wisdom.", img: "/credo.jpg" },
+  { name: "Prophetess Alice Lenshina Mulenga", desc: "Born 1920 in Chinsali, Northern Rhodesia. Founder of the Lumpa Church — one of Africa's most powerful female prophets.", img: "/c4copy.jpg" },
+  { name: "Johanne Masowe", desc: "Born Shoniwa Masedza Tandi Moyo, 1914, Gandanzara village, Makoni district, Zimbabwe. Founded the Apostolic Church in Zion.", img: "/johanne.jpg" },
+  { name: "Isaiah Shembe", desc: "Born 1870, KwaZulu-Natal. Founder of the Nazareth Baptist Church, one of Africa's largest indigenous churches.", img: "/1.jpg" },
+  { name: "Simon Kimbangu", desc: "Born 1887, Congo. Founder of the great Kimbanguist spiritual movement, imprisoned by colonial powers for his faith.", img: "/Untitled-22.jpg" },
+  { name: "Mantsopa Anna Makhetha", desc: "1793–1908, Lesotho. The most renowned prophetic voice of Southern Africa, whose predictions span generations.", img: "/2.jpg" },
+  { name: "Nehemiah Tile", desc: "1850–1891, Eastern Cape. Founder of the Tembu National Church — the first independent African church in South Africa.", img: "/sli3.jpg" },
+  { name: "Nontetha Nkwenkwe", desc: "1875–1935, Eastern Cape. Xhosa prophetess imprisoned by colonial authorities for preaching African spiritual renewal.", img: "/Untitled-25.jpg" },
 ];
 
 const filters = ["All", "Southern Africa", "East Africa", "Central Africa", "Prophets", "Kings"];

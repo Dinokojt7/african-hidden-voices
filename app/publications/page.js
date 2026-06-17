@@ -3,12 +3,12 @@ import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const books = [
-  { title: "Restoring Africa's Spiritual Identity", subtitle: "The IMboni Tradition in Southern Africa", year: "2025", publisher: "Cambridge University Press", featured: true },
-  { title: "The Hidden Prophets of the Congo", subtitle: "From Kimbangu to the Present", year: "2024", publisher: "AHV Press" },
-  { title: "Mantsopa: A Life of Vision", subtitle: "Documenting Lesotho's Prophetic Heritage", year: "2024", publisher: "AHV Press" },
-  { title: "Spiritual Authority and African Governance", subtitle: "IImboni as National Advisors", year: "2023", publisher: "AHV Press" },
-  { title: "The Khotso Sethuntsa Archives", subtitle: "Collected Testimonies and Field Records", year: "2023", publisher: "AHV Press" },
-  { title: "Africa's Indigenous Cosmology", subtitle: "A Research Anthology", year: "2022", publisher: "AHV Press" },
+  { title: "Restoring Africa's Spiritual Identity", subtitle: "The IMboni Tradition in Southern Africa", year: "2025", publisher: "Cambridge University Press", featured: true, img: "/mbanner.jpg" },
+  { title: "The Hidden Prophets of the Congo", subtitle: "From Kimbangu to the Present", year: "2024", publisher: "AHV Press", img: "/Untitled-22.jpg" },
+  { title: "Mantsopa: A Life of Vision", subtitle: "Documenting Lesotho's Prophetic Heritage", year: "2024", publisher: "AHV Press", img: "/c4copy.jpg" },
+  { title: "Spiritual Authority and African Governance", subtitle: "IImboni as National Advisors", year: "2023", publisher: "AHV Press", img: "/g6.jpg" },
+  { title: "The Khotso Sethuntsa Archives", subtitle: "Collected Testimonies and Field Records", year: "2023", publisher: "AHV Press", img: "/credo.jpg" },
+  { title: "Africa's Indigenous Cosmology", subtitle: "A Research Anthology", year: "2022", publisher: "AHV Press", img: "/9.jpg" },
 ];
 
 export const metadata = { title: "Publications — African Hidden Voices" };
@@ -34,10 +34,13 @@ export default function Publications() {
           <Reveal>
             <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 36 }}>Featured</div>
           </Reveal>
-          <div style={{ display: "grid", gridTemplateColumns: ".85fr 1.15fr", gap: 60, alignItems: "center" }}>
+          <div className="r-two-col" style={{ display: "grid", gridTemplateColumns: ".85fr 1.15fr", gap: 60, alignItems: "center" }}>
             <Reveal>
-              <div style={{ aspectRatio: "2/3", borderRadius: 10, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)", boxShadow: "8px 12px 32px rgba(42,22,20,.15)", background: "var(--ahv-oxblood-deep)", display: "flex", alignItems: "flex-end", padding: 28 }}>
-                <span style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 22, lineHeight: 1.3, color: "var(--ahv-cream)" }}>{featured.title}</span>
+              <div style={{ aspectRatio: "2/3", borderRadius: 10, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)", boxShadow: "8px 12px 32px rgba(42,22,20,.15)", position: "relative", display: "flex", alignItems: "flex-end" }}>
+                <img src={featured.img} alt={featured.title} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                <div style={{ position: "relative", width: "100%", padding: 28, background: "linear-gradient(transparent, rgba(42,12,10,.88))" }}>
+                  <span style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 22, lineHeight: 1.3, color: "var(--ahv-cream)" }}>{featured.title}</span>
+                </div>
               </div>
             </Reveal>
             <Reveal delay={120}>
@@ -63,8 +66,11 @@ export default function Publications() {
             {catalogue.map((b, i) => (
               <Reveal key={b.title} delay={i * 70}>
                 <div>
-                  <div style={{ aspectRatio: "2/3", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(110,19,22,.14)", marginBottom: 18, boxShadow: "4px 6px 20px rgba(42,22,20,.1)", background: "var(--ahv-oxblood)", display: "flex", alignItems: "flex-end", padding: 18 }}>
-                    <span style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 15, lineHeight: 1.3, color: "var(--ahv-cream)" }}>{b.title}</span>
+                  <div style={{ aspectRatio: "2/3", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(110,19,22,.14)", marginBottom: 18, boxShadow: "4px 6px 20px rgba(42,22,20,.1)", position: "relative", display: "flex", alignItems: "flex-end" }}>
+                    <img src={b.img} alt={b.title} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                    <div style={{ position: "relative", width: "100%", padding: "60px 18px 18px", background: "linear-gradient(transparent, rgba(42,12,10,.85))" }}>
+                      <span style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 15, lineHeight: 1.3, color: "var(--ahv-cream)" }}>{b.title}</span>
+                    </div>
                   </div>
                   <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 6 }}>{b.year} · {b.publisher}</div>
                   <h3 style={{ fontFamily: "var(--font-spectral)", fontWeight: 600, fontSize: 18, lineHeight: 1.25, margin: "0 0 4px", color: "var(--ahv-ink)" }}>{b.title}</h3>
