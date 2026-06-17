@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
+@theme {
+  --color-oxblood: #6E1316;
+  --color-oxblood-deep: #420C0F;
+  --color-crimson: #8B1A1D;
+  --color-parchment: #F6EFE2;
+  --color-parchment-2: #ECE0CC;
+  --color-gold: #C9A24B;
+  --color-gold-soft: #E6CF8A;
+  --color-gold-band: #EDDDB2;
+  --color-cream: #F5E7C0;
+  --color-ink: #2A1614;
+  --color-ink-soft: #5E4742;
+  --color-muted: #7A635E;
+  --font-spectral: 'Spectral', Georgia, serif;
+  --font-hanken: 'Hanken Grotesk', sans-serif;
+  --font-cinzel: 'Cinzel', serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ahv-oxblood: #6E1316;
+  --ahv-oxblood-deep: #420C0F;
+  --ahv-crimson: #8B1A1D;
+  --ahv-parchment: #F6EFE2;
+  --ahv-parchment-2: #ECE0CC;
+  --ahv-gold: #C9A24B;
+  --ahv-gold-soft: #E6CF8A;
+  --ahv-gold-band: #EDDDB2;
+  --ahv-cream: #F5E7C0;
+  --ahv-ink: #2A1614;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--ahv-parchment);
+  color: var(--ahv-ink);
+  font-family: 'Spectral', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+::selection {
+  background: var(--ahv-gold);
+  color: var(--ahv-oxblood-deep);
+}
+
+a { color: inherit; text-decoration: none; }
+* { box-sizing: border-box; }
+input, textarea, select { font-family: 'Hanken Grotesk', sans-serif; }
