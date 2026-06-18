@@ -40,6 +40,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <header style={{ position: "relative", color: "var(--ahv-cream)", overflow: "hidden", background: "radial-gradient(120% 120% at 78% 8%, #5c1013 0%, var(--ahv-oxblood) 42%, var(--ahv-oxblood-deep) 100%)" }}>
+        <img src="/6.jpg" alt="" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", opacity: 0.10, display: "block", pointerEvents: "none" }} />
         {/* diagonal line texture */}
         <div style={{ position: "absolute", inset: 0, opacity: 0.09, backgroundImage: "repeating-linear-gradient(135deg, rgba(245,231,192,.5) 0 1px, transparent 1px 26px)", pointerEvents: "none" }} />
         {/* gold glow top-right */}
