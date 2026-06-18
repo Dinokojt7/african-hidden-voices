@@ -52,7 +52,7 @@ export default function PodcastPage() {
                 </button>
               </div>
               <div style={{ width: 280, flexShrink: 0, overflow: "hidden" }}>
-                <img src="/l1.jpg" alt="Podcast episode" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block", minHeight: 280 }} />
+                <img src="/7.jpg" alt="Podcast episode" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block", minHeight: 280 }} />
               </div>
             </div>
           </Reveal>

@@ -3,11 +3,11 @@ import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const books = [
-  { title: "Restoring Africa's Spiritual Identity", subtitle: "The IMboni Tradition in Southern Africa", year: "2025", publisher: "Cambridge University Press", featured: true, img: "/mbanner.jpg" },
+  { title: "Restoring Africa's Spiritual Identity", subtitle: "The IMboni Tradition in Southern Africa", year: "2025", publisher: "Cambridge University Press", featured: true, img: "/cambridge.jpg" },
   { title: "The Hidden Prophets of the Congo", subtitle: "From Kimbangu to the Present", year: "2024", publisher: "AHV Press", img: "/Untitled-22.jpg" },
   { title: "Mantsopa: A Life of Vision", subtitle: "Documenting Lesotho's Prophetic Heritage", year: "2024", publisher: "AHV Press", img: "/c4copy.jpg" },
   { title: "Spiritual Authority and African Governance", subtitle: "IImboni as National Advisors", year: "2023", publisher: "AHV Press", img: "/g6.jpg" },
-  { title: "The Khotso Sethuntsa Archives", subtitle: "Collected Testimonies and Field Records", year: "2023", publisher: "AHV Press", img: "/credo.jpg" },
+  { title: "The Khotso Sethuntsa Archives", subtitle: "Collected Testimonies and Field Records", year: "2023", publisher: "AHV Press", img: "/sethuntsa.jpg" },
   { title: "Africa's Indigenous Cosmology", subtitle: "A Research Anthology", year: "2022", publisher: "AHV Press", img: "/9.jpg" },
 ];
 

@@ -28,6 +28,7 @@ const hanken = Hanken_Grotesk({
 export const metadata = {
   title: "African Hidden Voices",
   description: "A pan-African research institution retracing the IImboni, Kings and spiritual leaders whose wisdom colonialism tried to erase.",
+  icons: { icon: "/favicon.png" },
 };
 
 export default function RootLayout({ children }) {

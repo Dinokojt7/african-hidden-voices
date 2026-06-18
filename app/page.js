@@ -15,9 +15,9 @@ const episodes = [
 ];
 
 const books = [
-  { title: "Restoring Africa's Spiritual Identity", author: "African Hidden Voices", year: "2024" },
-  { title: "The Revelation Spiritual Home", author: "Cambridge University Press", year: "2025" },
-  { title: "Voices of the Ancestors", author: "AHV Press · Research Compendium", year: "2025" },
+  { title: "Restoring Africa's Spiritual Identity", author: "African Hidden Voices", year: "2024", img: "/l5.jpg" },
+  { title: "The Revelation Spiritual Home", author: "Cambridge University Press", year: "2025", img: "/2.jpg" },
+  { title: "Voices of the Ancestors", author: "AHV Press · Research Compendium", year: "2025", img: "/g14.jpg" },
 ];
 
 const events = [
@@ -40,7 +40,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <header style={{ position: "relative", background: "radial-gradient(120% 120% at 75% 0%, #5c1013 0%, var(--ahv-oxblood) 38%, var(--ahv-oxblood-deep) 100%)", color: "var(--ahv-cream)", overflow: "hidden" }}>
-        <img src="/6.jpg" alt="" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", opacity: 0.18, display: "block", pointerEvents: "none" }} />
+        <img src="/6.jpg" alt="" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", opacity: 0.10, display: "block", pointerEvents: "none" }} />
         <div style={{ position: "absolute", inset: 0, opacity: .09, backgroundImage: "repeating-linear-gradient(135deg, rgba(245,231,192,.5) 0 1px, transparent 1px 26px)", pointerEvents: "none" }} />
         <div style={{ position: "absolute", top: -120, right: -120, width: 520, height: 520, borderRadius: "50%", background: "radial-gradient(circle, rgba(201,162,75,.18), transparent 65%)", pointerEvents: "none" }} />
         <div className="r-two-col r-pad" style={{ position: "relative", maxWidth: 1240, margin: "0 auto", padding: "96px 40px 110px", display: "grid", gridTemplateColumns: "1.15fr .85fr", gap: 56, alignItems: "center" }}>
@@ -58,14 +58,14 @@ export default function Home() {
               <Link href="/archive" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-gold)", color: "var(--ahv-oxblood-deep)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "16px 28px", borderRadius: 999 }}>
                 Explore the Archive <ArrowRight size={17} strokeWidth={2.2} />
               </Link>
-              <Link href="/podcast" style={{ display: "inline-flex", alignItems: "center", gap: 11, color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, letterSpacing: ".04em", padding: "16px 22px", border: "1px solid rgba(245,231,192,.3)", borderRadius: 999 }}>
+              <a href="https://www.youtube.com/@africanhiddenvoicesunmaski830" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 11, color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, letterSpacing: ".04em", padding: "16px 22px", border: "1px solid rgba(245,231,192,.3)", borderRadius: 999 }}>
                 <Play size={15} fill="currentColor" stroke="none" /> Watch the Podcast
-              </Link>
+              </a>
             </div>
           </Reveal>
           <Reveal delay={160}>
             <div style={{ position: "relative", aspectRatio: "4/5", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(201,162,75,.4)", boxShadow: "0 40px 80px -30px rgba(0,0,0,.6)" }}>
-              <img src="/6june2019.png" alt="Imboni Dr. uZwi-Lezwe Radebe" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <img src="/hero-right-card.jpg" alt="Imboni Dr. uZwi-Lezwe Radebe" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} />
               <div style={{ position: "absolute", bottom: 0, width: "100%", padding: 22, background: "linear-gradient(transparent, rgba(66,12,15,.85))" }}>
                 <div style={{ fontFamily: "var(--font-hanken)", fontSize: 11, letterSpacing: ".2em", textTransform: "uppercase", color: "var(--ahv-gold)", marginBottom: 6 }}>The Founder</div>
                 <div style={{ fontFamily: "var(--font-spectral)", fontSize: 21, lineHeight: 1.2 }}>iNkosi yamaKhosi oMoya<br />Imboni Dr. uZwi-Lezwe Radebe</div>
@@ -130,7 +130,7 @@ export default function Home() {
         <div className="r-two-col" style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: ".8fr 1.2fr", gap: 64, alignItems: "center" }}>
           <Reveal>
             <div style={{ aspectRatio: "3/4", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)" }}>
-              <img src="/g12.jpg" alt="Imboni Dr. uZwi-Lezwe Radebe" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <img src="/founder.jpg" alt="Imboni Dr. uZwi-Lezwe Radebe" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} />
             </div>
           </Reveal>
           <Reveal delay={120}>
@@ -227,18 +227,18 @@ export default function Home() {
             <Reveal delay={120}>
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                 {episodes.map((ep) => (
-                  <Link key={ep.num} href="/podcast" style={{ display: "flex", alignItems: "center", gap: 18, background: "var(--ahv-parchment)", border: "1px solid rgba(110,19,22,.12)", borderRadius: 10, padding: "20px 22px" }}>
+                  <a key={ep.num} href="https://www.youtube.com/@africanhiddenvoicesunmaski830" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 18, background: "var(--ahv-parchment)", border: "1px solid rgba(110,19,22,.12)", borderRadius: 10, padding: "20px 22px" }}>
                     <div style={{ fontFamily: "var(--font-cinzel)", fontWeight: 600, fontSize: 24, color: "var(--ahv-gold)", minWidth: 42 }}>{ep.num}</div>
                     <div style={{ flex: 1 }}>
                       <h4 style={{ fontFamily: "var(--font-spectral)", fontWeight: 600, fontSize: 18, margin: "0 0 4px", color: "var(--ahv-ink)" }}>{ep.title}</h4>
                       <p style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, color: "#7a635e", margin: 0 }}>{ep.length}</p>
                     </div>
                     <ArrowRight size={18} color="var(--ahv-crimson)" strokeWidth={2} />
-                  </Link>
+                  </a>
                 ))}
-                <Link href="/podcast" style={{ display: "inline-flex", alignItems: "center", gap: 9, marginTop: 6, fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 13.5, color: "var(--ahv-crimson)", paddingLeft: 4 }}>
+                <a href="https://www.youtube.com/@africanhiddenvoicesunmaski830" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 9, marginTop: 6, fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 13.5, color: "var(--ahv-crimson)", paddingLeft: 4 }}>
                   Subscribe on YouTube <ArrowRight size={15} strokeWidth={2} />
-                </Link>
+                </a>
               </div>
             </Reveal>
           </div>
@@ -258,8 +258,11 @@ export default function Home() {
             {books.map((book) => (
               <Reveal key={book.title}>
                 <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
-                  <div style={{ aspectRatio: "3/4", borderRadius: 6, overflow: "hidden", background: "repeating-linear-gradient(45deg, rgba(110,19,22,.06) 0 11px, rgba(110,19,22,.1) 11px 22px), var(--ahv-oxblood)", display: "flex", alignItems: "flex-end", padding: 26, boxShadow: "0 26px 50px -28px rgba(66,12,15,.6)", border: "1px solid rgba(201,162,75,.25)" }}>
-                    <span style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 20, lineHeight: 1.25, color: "var(--ahv-cream)" }}>{book.title}</span>
+                  <div style={{ aspectRatio: "3/4", borderRadius: 6, overflow: "hidden", position: "relative", display: "flex", alignItems: "flex-end", boxShadow: "0 26px 50px -28px rgba(66,12,15,.6)", border: "1px solid rgba(201,162,75,.25)" }}>
+                    <img src={book.img} alt={book.title} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                    <div style={{ position: "relative", width: "100%", padding: 26, background: "linear-gradient(transparent, rgba(42,12,10,.88))" }}>
+                      <span style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 20, lineHeight: 1.25, color: "var(--ahv-cream)" }}>{book.title}</span>
+                    </div>
                   </div>
                   <div>
                     <h3 style={{ fontFamily: "var(--font-spectral)", fontWeight: 600, fontSize: 20, margin: "0 0 6px", color: "var(--ahv-ink)" }}>{book.title}</h3>

@@ -42,7 +42,7 @@ export default function About() {
           </Reveal>
           <Reveal delay={120}>
             <div style={{ aspectRatio: "4/5", borderRadius: 10, overflow: "hidden", border: "1px solid rgba(110,19,22,.18)" }}>
-              <img src="/l1.jpg" alt="AHV gathering" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <img src="/Untitled-25.jpg" alt="AHV gathering" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
           </Reveal>
         </div>

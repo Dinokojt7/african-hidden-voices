@@ -22,9 +22,8 @@ export default function Footer() {
         <div>
           <h4 style={{ fontFamily: "var(--font-hanken)", fontSize: 12, fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--ahv-crimson)", margin: "0 0 18px" }}>Media</h4>
           <div style={{ display: "flex", flexDirection: "column", gap: 11, fontFamily: "var(--font-hanken)", fontSize: 14, color: "#5e4742" }}>
-            <Link href="/podcast">Podcast</Link>
             <Link href="/publications">Publications</Link>
-            <a href="#">YouTube</a>
+            <a href="https://www.youtube.com/@africanhiddenvoicesunmaski830" target="_blank" rel="noopener noreferrer">YouTube</a>
             <a href="#">Facebook</a>
           </div>
         </div>
