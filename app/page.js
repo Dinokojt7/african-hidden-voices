@@ -39,40 +39,63 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <header style={{ position: "relative", background: "radial-gradient(120% 120% at 75% 0%, #5c1013 0%, var(--ahv-oxblood) 38%, var(--ahv-oxblood-deep) 100%)", color: "var(--ahv-cream)", overflow: "hidden" }}>
-        <img src="/6.jpg" alt="" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", opacity: 0.10, display: "block", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", inset: 0, opacity: .09, backgroundImage: "repeating-linear-gradient(135deg, rgba(245,231,192,.5) 0 1px, transparent 1px 26px)", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", top: -120, right: -120, width: 520, height: 520, borderRadius: "50%", background: "radial-gradient(circle, rgba(201,162,75,.18), transparent 65%)", pointerEvents: "none" }} />
-        <div className="r-two-col r-pad" style={{ position: "relative", maxWidth: 1240, margin: "0 auto", padding: "96px 40px 110px", display: "grid", gridTemplateColumns: "1.15fr .85fr", gap: 56, alignItems: "center" }}>
+      <header style={{ position: "relative", color: "var(--ahv-cream)", overflow: "hidden", background: "radial-gradient(120% 120% at 78% 8%, #5c1013 0%, var(--ahv-oxblood) 42%, var(--ahv-oxblood-deep) 100%)" }}>
+        {/* diagonal line texture */}
+        <div style={{ position: "absolute", inset: 0, opacity: 0.09, backgroundImage: "repeating-linear-gradient(135deg, rgba(245,231,192,.5) 0 1px, transparent 1px 26px)", pointerEvents: "none" }} />
+        {/* gold glow top-right */}
+        <div style={{ position: "absolute", top: -140, right: -120, width: 560, height: 560, borderRadius: "50%", background: "radial-gradient(circle, rgba(201,162,75,.20), transparent 66%)", pointerEvents: "none" }} />
+
+        <div className="r-pad" style={{ position: "relative", maxWidth: 1240, margin: "0 auto", padding: "60px 40px 64px" }}>
+          {/* EYEBROW + FULL-WIDTH HEADLINE */}
           <Reveal>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-gold)", marginBottom: 30 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-gold)", marginBottom: 28 }}>
               <span style={{ width: 30, height: 1, background: "var(--ahv-gold)" }} />Unmasking African Truths
             </div>
-            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(38px,5vw,64px)", lineHeight: 1.04, letterSpacing: "-.01em", margin: "0 0 26px" }}>
-              The voices Africa was told<br />to forget are <em style={{ fontStyle: "italic", color: "var(--ahv-gold-soft)" }}>speaking again.</em>
+            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(38px,5.5vw,72px)", lineHeight: 1.03, letterSpacing: "-.015em", margin: "0 0 52px" }}>
+              The voices Africa was told to forget are{" "}
+              <em style={{ fontStyle: "italic", color: "var(--ahv-gold-soft)" }}>speaking again.</em>
             </h1>
-            <p style={{ fontSize: 19, lineHeight: 1.65, maxWidth: 540, color: "rgba(245,231,192,.82)", fontWeight: 300, margin: "0 0 38px" }}>
-              African Hidden Voices is a pan-African research institution retracing the IImboni, Kings and spiritual leaders whose wisdom colonialism tried to erase — and restoring their rightful place in the future of the Continent.
-            </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center" }}>
-              <Link href="/archive" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-gold)", color: "var(--ahv-oxblood-deep)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "16px 28px", borderRadius: 999 }}>
+          </Reveal>
+
+          {/* TWO-COL: description LEFT, framed photo RIGHT */}
+          <div className="r-two-col" style={{ display: "grid", gridTemplateColumns: ".75fr 1.25fr", gap: 52, alignItems: "center", marginBottom: 40 }}>
+            <Reveal delay={100}>
+              <p style={{ fontFamily: "var(--font-spectral)", fontSize: 18.5, lineHeight: 1.66, color: "rgba(245,231,192,.85)", fontWeight: 300, margin: 0 }}>
+                African Hidden Voices is a pan-African research institution retracing the IImboni, Kings and spiritual leaders whose wisdom colonialism tried to erase — and restoring their rightful place in the future of the Continent.
+              </p>
+            </Reveal>
+
+            {/* RIGHT — gold-framed photo */}
+            <Reveal delay={200}>
+              <div style={{ position: "relative" }}>
+                <div style={{ position: "absolute", inset: -14, borderRadius: 18, background: "radial-gradient(circle at 70% 30%, rgba(201,162,75,.22), transparent 70%)", pointerEvents: "none" }} />
+                <figure style={{ position: "relative", margin: 0, border: "3px solid var(--ahv-gold)", borderRadius: 12, padding: 7, background: "rgba(66,12,15,.45)", boxShadow: "0 40px 80px -34px rgba(0,0,0,.7)" }}>
+                  <div style={{ position: "relative", overflow: "hidden", borderRadius: 7 }}>
+                    <img src="/hero-bg.jpg" alt="The African Hidden Voices research team" style={{ display: "block", width: "100%", height: "auto" }} />
+                    <div style={{ position: "absolute", inset: 0, mixBlendMode: "multiply", background: "linear-gradient(180deg, rgba(66,12,15,.14) 0%, rgba(66,12,15,0) 26%, rgba(66,12,15,0) 64%, rgba(110,19,22,.30) 100%)", pointerEvents: "none" }} />
+                    <figcaption style={{ position: "absolute", bottom: 16, left: 16, display: "inline-flex", alignItems: "center", gap: 10, borderRadius: 999, padding: "8px 16px", fontSize: 11.5, fontFamily: "var(--font-hanken)", textTransform: "uppercase", letterSpacing: ".14em", backdropFilter: "blur(4px)", background: "rgba(66,12,15,.78)", border: "1px solid rgba(201,162,75,.4)", color: "var(--ahv-cream)" }}>
+                      <span style={{ display: "inline-block", width: 7, height: 7, borderRadius: "50%", background: "var(--ahv-gold)" }} />
+                      The AHV Research Team
+                    </figcaption>
+                  </div>
+                </figure>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* BUTTONS — full-width row below, left-aligned */}
+          <Reveal delay={280}>
+            <div style={{ display: "inline-flex", flexWrap: "wrap", gap: 16, alignItems: "center" }}>
+              <Link href="/archive" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-gold)", color: "var(--ahv-oxblood-deep)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "16px 28px", borderRadius: 999, whiteSpace: "nowrap" }}>
                 Explore the Archive <ArrowRight size={17} strokeWidth={2.2} />
               </Link>
-              <a href="https://www.youtube.com/@africanhiddenvoicesunmaski830" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 11, color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, letterSpacing: ".04em", padding: "16px 22px", border: "1px solid rgba(245,231,192,.3)", borderRadius: 999 }}>
+              <a href="https://www.youtube.com/@africanhiddenvoicesunmaski830" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, letterSpacing: ".04em", padding: "16px 22px", border: "1px solid rgba(245,231,192,.35)", borderRadius: 999, whiteSpace: "nowrap" }}>
                 <Play size={15} fill="currentColor" stroke="none" /> Watch the Podcast
               </a>
             </div>
           </Reveal>
-          <Reveal delay={160}>
-            <div style={{ position: "relative", aspectRatio: "4/5", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(201,162,75,.4)", boxShadow: "0 40px 80px -30px rgba(0,0,0,.6)" }}>
-              <img src="/hero-right-card.jpg" alt="Imboni Dr. uZwi-Lezwe Radebe" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} />
-              <div style={{ position: "absolute", bottom: 0, width: "100%", padding: 22, background: "linear-gradient(transparent, rgba(66,12,15,.85))" }}>
-                <div style={{ fontFamily: "var(--font-hanken)", fontSize: 11, letterSpacing: ".2em", textTransform: "uppercase", color: "var(--ahv-gold)", marginBottom: 6 }}>The Founder</div>
-                <div style={{ fontFamily: "var(--font-spectral)", fontSize: 21, lineHeight: 1.2 }}>iNkosi yamaKhosi oMoya<br />Imboni Dr. uZwi-Lezwe Radebe</div>
-              </div>
-            </div>
-          </Reveal>
         </div>
+
         <div style={{ height: 6, background: "linear-gradient(90deg, var(--ahv-gold-soft), var(--ahv-gold), var(--ahv-crimson))" }} />
       </header>
 
