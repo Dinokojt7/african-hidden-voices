@@ -4,41 +4,43 @@ import Reveal from "@/components/Reveal";
 
 const disciplines = [
   {
-    title: "Economics & Resource Systems",
-    desc: "How AIS governs land tenure, resource allocation, wealth distribution, and trade — revealing a pre-colonial economic philosophy with direct relevance to contemporary development debates.",
+    title: "AIS & Economics",
     img: "/g6.jpg",
-    focus: ["Land sovereignty", "Indigenous trade systems", "Communal resource ethics", "Spiritual economics"],
+    focus: ["Scarcity vs abundance frameworks", "Spiritual value systems", "Restoration economics"],
+    desc: "Examining African Indigenous Spirituality in relation to economic thought — exploring how Spirit-led frameworks reframe questions of scarcity, value, and resource distribution within a restoration-driven model.",
   },
   {
-    title: "Governance & Political Philosophy",
-    desc: "Kingship, chieftaincy, and the advisory role of IImboni in governance — examining how African Indigenous Spirituality underpins legitimate political authority and national decision-making.",
+    title: "AIS & Governance",
     img: "/Untitled-22.jpg",
-    focus: ["Customary law", "IImboni as national advisors", "Chieftaincy systems", "Spiritual legitimacy"],
+    focus: ["Spiritual leadership structures", "Role of Imboni and PSCBs", "Ethical governance systems"],
+    desc: "Studying the role of spiritual authority in governance — including the function of Imboni and PSCBs as guides for national leadership, and the ethical structures that emerge from a Spirit-led understanding of power.",
   },
   {
-    title: "Philosophy & Epistemology",
-    desc: "African logic, metaphysics, and theories of knowledge — studying how AIS constructs reality, frames ethical reasoning, and establishes what counts as knowledge and who is qualified to hold it.",
+    title: "AIS & Philosophy",
     img: "/l5.jpg",
-    focus: ["Ubuntu epistemology", "African metaphysics", "Cosmological logic", "Oral knowledge systems"],
+    focus: ["Purpose of human existence", "Limits of Western epistemology", "Revelation-based ontology"],
+    desc: "Engaging African Indigenous Spirituality as a complete philosophical system — exploring purpose, existence, and knowing through a revelation-based ontology that challenges and extends the limits of Western epistemological frameworks.",
   },
   {
-    title: "Social Systems & Ethics",
-    desc: "Kinship structures, ubuntu philosophy, conflict resolution, and community ethics as expressed through AIS — showing how spirituality functions as the binding architecture of African social life.",
+    title: "AIS & Social Systems",
     img: "/2.jpg",
-    focus: ["Ubuntu ethics", "Kinship & lineage", "Restorative justice", "Community formation"],
+    focus: ["Community structure", "African social organisation", "Cultural continuity"],
+    desc: "Analysing how AIS shapes community formation, social organisation, and cultural continuity — showing how Spirit-led principles underpin African social life across generations and geographies.",
   },
   {
-    title: "Indigenous Knowledge Systems (IKS)",
-    desc: "The systematic study of traditional herbalism, ecology, astronomy, calendrical knowledge, and healing — positioning IKS within the broader AIS cosmology from which it draws its authority.",
+    title: "AIS & Knowledge Systems",
     img: "/sli3.jpg",
-    focus: ["Traditional medicine", "Ecological stewardship", "Astronomical knowledge", "Healing cosmology"],
+    focus: ["AIS as origin (Spirit)", "IKS as derived structure", "Knowledge hierarchy"],
+    desc: "Examining the relationship between AIS and Indigenous Knowledge Systems (IKS) — positioning AIS as the spiritual origin from which IKS emerges as a derived structure, and establishing the proper knowledge hierarchy within AHV's research framework.",
   },
-  {
-    title: "Science Division",
-    desc: "Bridging AIS with contemporary scientific frameworks — exploring areas of convergence between indigenous cosmological understanding and modern physics, biology, neuroscience, and systems theory.",
-    img: "/l1.jpg",
-    focus: ["Consciousness studies", "Quantum cosmology", "Indigenous ecology", "Integrative science"],
-  },
+];
+
+const scienceDivision = [
+  { title: "AIS Mathematics", desc: "Number, order, hierarchy, and spiritual structure — exploring the mathematical dimensions of AIS cosmological understanding." },
+  { title: "AIS Science", desc: "Revelation-informed natural understanding — engaging the natural world through the epistemological lens of AIS." },
+  { title: "AIS Cosmology", desc: "Universal order and spiritual structure of existence — studying the cosmos as understood through African Indigenous Spirituality." },
+  { title: "AIS Archaeology", desc: "Revelation-informed interpretation of ancient civilisations — reading archaeological evidence through an AIS framework." },
+  { title: "AIS Geology", desc: "Earth as spiritual structure and living order — engaging geological knowledge within a Spirit-led understanding of the natural world." },
 ];
 
 export const metadata = { title: "Areas of Study — African Hidden Voices" };
@@ -49,13 +51,14 @@ export default function AreasOfStudy() {
       <header style={{ padding: "84px 40px 70px", borderBottom: "1px solid rgba(110,19,22,.1)" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
           <Reveal>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 20 }}>Areas of Study</div>
-            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(36px,5vw,56px)", lineHeight: 1.08, letterSpacing: "-.01em", margin: "0 0 24px", color: "var(--ahv-ink)", maxWidth: 900 }}>Six disciplines of African Indigenous Spirituality.</h1>
-            <p style={{ fontSize: 19, lineHeight: 1.7, color: "#5e4742", maxWidth: 680, margin: 0 }}>AIS is not a single subject — it is a total system of knowledge expressed across every dimension of human life. AHV's research is structured around six core disciplines, each forming a distinct but interconnected area of academic inquiry.</p>
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 20 }}>Areas of Study — Core Academic Hub</div>
+            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(36px,5vw,56px)", lineHeight: 1.08, letterSpacing: "-.01em", margin: "0 0 24px", color: "var(--ahv-ink)", maxWidth: 900 }}>AIS across disciplines.</h1>
+            <p style={{ fontSize: 19, lineHeight: 1.7, color: "#5e4742", maxWidth: 680, margin: 0 }}>AHV engages multiple fields of study, including African Indigenous Spirituality in relation to economics, governance, philosophy, social systems, and knowledge systems — all understood as expressions within a Spirit-led epistemological framework.</p>
           </Reveal>
         </div>
       </header>
 
+      {/* CORE DISCIPLINES */}
       <section style={{ padding: "90px 40px" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto", display: "flex", flexDirection: "column", gap: 0 }}>
           {disciplines.map((d, i) => (
@@ -87,6 +90,30 @@ export default function AreasOfStudy() {
         </div>
       </section>
 
+      {/* AIS SCIENCE DIVISION */}
+      <section style={{ background: "var(--ahv-parchment-2)", padding: "110px 40px" }}>
+        <div style={{ maxWidth: 1240, margin: "0 auto" }}>
+          <Reveal>
+            <div style={{ maxWidth: 660, marginBottom: 58 }}>
+              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>AIS Science Division</div>
+              <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(28px,4vw,40px)", lineHeight: 1.12, margin: "0 0 16px", color: "var(--ahv-ink)" }}>Scientific and cosmological inquiry.</h2>
+              <p style={{ fontSize: 17, lineHeight: 1.7, color: "#5e4742", margin: 0 }}>AHV extends into scientific and cosmological inquiry through structured disciplines — all understood as subfields within a Spirit-led epistemological framework. These are not separate from AIS; they are expressions of it.</p>
+            </div>
+          </Reveal>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px,1fr))", gap: 24 }}>
+            {scienceDivision.map((sub, i) => (
+              <Reveal key={sub.title} delay={i * 70}>
+                <div style={{ background: "var(--ahv-parchment)", border: "1px solid rgba(110,19,22,.12)", borderRadius: 12, padding: "34px 28px", borderTop: "3px solid var(--ahv-gold)", height: "100%" }}>
+                  <h3 style={{ fontFamily: "var(--font-spectral)", fontWeight: 600, fontSize: 20, margin: "0 0 12px", color: "var(--ahv-ink)" }}>{sub.title}</h3>
+                  <p style={{ fontSize: 15.5, lineHeight: 1.68, color: "#5e4742", margin: 0 }}>{sub.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section style={{ background: "var(--ahv-oxblood)", color: "var(--ahv-cream)", padding: "110px 40px", textAlign: "center" }}>
         <Reveal>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>

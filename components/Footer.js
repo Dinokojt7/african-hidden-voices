@@ -7,7 +7,9 @@ export default function Footer() {
     <footer style={{ background: "var(--ahv-parchment-2)", color: "var(--ahv-ink)", padding: "72px 40px 40px", borderTop: "4px solid var(--ahv-gold)" }}>
       <div style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gridTemplateColumns: "1.6fr 1fr 1fr 1.2fr", gap: 48 }} className="footer-grid">
         <div>
-          <Link href="/"><Image src="/logo.png" alt="African Hidden Voices" width={360} height={120} style={{ height: 120, width: "auto", marginBottom: 20, display: "block", mixBlendMode: "multiply" }} /></Link>
+          <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+                    <Image src="/logo.png" alt="African Hidden Voices" width={320} height={90} style={{ height: 68, width: "auto", display: "block", mixBlendMode: "multiply" }} />
+                  </Link>
           <p style={{ fontSize: 14.5, lineHeight: 1.7, color: "#5e4742", maxWidth: 300, margin: 0 }}>A global academic research institution dedicated to the study, documentation, and advancement of African Indigenous Spirituality (AIS). An initiative of The Revelation Spiritual Home.</p>
         </div>
         <div>

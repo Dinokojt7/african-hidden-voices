@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Play, Search, BookOpen, GraduationCap, Globe } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const archive = [
@@ -20,11 +20,17 @@ const books = [
   { title: "Voices of the Ancestors", author: "AHV Press · Research Compendium", year: "2025", img: "/g14.jpg" },
 ];
 
-const pillars = [
-  { icon: Search, title: "Documentation & Archival Recovery", body: "A dedicated team of researchers locating, verifying, and preserving the records of Africa's IImboni, prophets, and spiritual authorities." },
-  { icon: BookOpen, title: "Academic Research & Publishing", body: "Producing peer-reviewed scholarship, monographs, and institutional papers that establish AIS as a rigorous field of study." },
-  { icon: Globe, title: "Institutional Engagement", body: "Partnering with universities, governments, and global bodies to advance AIS within official academic and policy frameworks." },
-  { icon: GraduationCap, title: "AIS Education & Dialogue", body: "Conferences, podcasts, and public programmes that bring AIS knowledge to communities, scholars, and practitioners worldwide." },
+const mandate = [
+  { label: "Revealed", suffix: ", not assumed" },
+  { label: "Practiced", suffix: ", not abstracted" },
+  { label: "Documented", suffix: ", without being reduced" },
+  { label: "Positioned globally", suffix: ", without losing its origin" },
+];
+
+const globalPosition = [
+  "Advances AIS as the foundation of spiritual understanding",
+  "Engages global institutions with a Spirit-led framework",
+  "Contributes to the realignment of spiritual consciousness across disciplines and societies",
 ];
 
 export default function Home() {
@@ -39,18 +45,18 @@ export default function Home() {
         <div className="r-pad" style={{ position: "relative", maxWidth: 1240, margin: "0 auto", padding: "60px 40px 64px" }}>
           <Reveal>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-gold)", marginBottom: 28 }}>
-              <span style={{ width: 30, height: 1, background: "var(--ahv-gold)" }} />African Hidden Voices — Global Research Institution
+              <span style={{ width: 30, height: 1, background: "var(--ahv-gold)" }} />African Hidden Voices — Research Institution
             </div>
-            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(38px,5.5vw,72px)", lineHeight: 1.03, letterSpacing: "-.015em", margin: "0 0 52px" }}>
-              African Indigenous Spirituality is not a relic —{" "}
-              <em style={{ fontStyle: "italic", color: "var(--ahv-gold-soft)" }}>it is a living, researchable science.</em>
+            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(34px,5vw,66px)", lineHeight: 1.06, letterSpacing: "-.015em", margin: "0 0 52px" }}>
+              African Indigenous Spirituality as Spirit:{" "}
+              <em style={{ fontStyle: "italic", color: "var(--ahv-gold-soft)" }}>The Foundation of Universal Spiritual Practice.</em>
             </h1>
           </Reveal>
 
           <div className="r-two-col" style={{ display: "grid", gridTemplateColumns: ".75fr 1.25fr", gap: 52, alignItems: "center", marginBottom: 40 }}>
             <Reveal delay={100}>
               <p style={{ fontFamily: "var(--font-spectral)", fontSize: 18.5, lineHeight: 1.66, color: "rgba(245,231,192,.85)", fontWeight: 300, margin: 0 }}>
-                African Hidden Voices is a global research institution dedicated to the academic study, documentation, and advancement of African Indigenous Spirituality (AIS) — establishing it as a legitimate and rigorous field of intellectual inquiry on the world stage.
+                The African Hidden Voices (AHV) is a research and institutional platform advancing African Indigenous Spirituality (AIS) as a living, revealed reality, guiding spiritual understanding, academic engagement, and institutional transformation across Africa and the world.
               </p>
             </Reveal>
 
@@ -74,10 +80,10 @@ export default function Home() {
           <Reveal delay={280}>
             <div style={{ display: "inline-flex", flexWrap: "wrap", gap: 16, alignItems: "center" }}>
               <Link href="/about" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-gold)", color: "var(--ahv-oxblood-deep)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "16px 28px", borderRadius: 999, whiteSpace: "nowrap" }}>
-                Explore the Framework <ArrowRight size={17} strokeWidth={2.2} />
+                Explore Our Framework <ArrowRight size={17} strokeWidth={2.2} />
               </Link>
-              <Link href="/archive" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, letterSpacing: ".04em", padding: "16px 22px", border: "1px solid rgba(245,231,192,.35)", borderRadius: 999, whiteSpace: "nowrap" }}>
-                Enter the Archive <ArrowRight size={15} strokeWidth={2} />
+              <Link href="/research" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, letterSpacing: ".04em", padding: "16px 22px", border: "1px solid rgba(245,231,192,.35)", borderRadius: 999, whiteSpace: "nowrap" }}>
+                Engage With Our Research <ArrowRight size={15} strokeWidth={2} />
               </Link>
             </div>
           </Reveal>
@@ -86,22 +92,30 @@ export default function Home() {
         <div style={{ height: 6, background: "linear-gradient(90deg, var(--ahv-gold-soft), var(--ahv-gold), var(--ahv-crimson))" }} />
       </header>
 
-      {/* WHAT IS AIS */}
+      {/* CORE MESSAGE */}
       <section style={{ background: "var(--ahv-parchment)", padding: "120px 40px" }}>
         <div className="r-two-col" style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 72, alignItems: "center" }}>
           <Reveal>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 22 }}>What is AIS?</div>
-            <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 400, fontSize: "clamp(29px,4vw,42px)", lineHeight: 1.28, letterSpacing: "-.01em", margin: "0 0 28px", color: "var(--ahv-ink)" }}>
-              A cosmological, philosophical, and{" "}
-              <span style={{ color: "var(--ahv-crimson)", fontStyle: "italic" }}>governance system</span>{" "}
-              encoded in Africa's spiritual traditions.
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 22 }}>Core Message</div>
+            <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 400, fontSize: "clamp(26px,3.5vw,38px)", lineHeight: 1.25, margin: "0 0 28px", color: "var(--ahv-ink)" }}>
+              African Indigenous Spirituality is not a constructed system.
             </h2>
             <p style={{ fontSize: 17.5, lineHeight: 1.75, color: "#5e4742", margin: "0 0 20px" }}>
-              African Indigenous Spirituality is not a religion, not a cultural curiosity, and not a relic of the past. It is a complete system of thought — governing how communities organise, how knowledge is transmitted, how justice is administered, and how human beings relate to the cosmos.
+              It is the Spirit <strong style={{ color: "var(--ahv-ink)" }}>revealed through experience</strong>, activated through practice, and sustained through spiritual hierarchy.
             </p>
-            <p style={{ fontSize: 17.5, lineHeight: 1.75, color: "#5e4742", margin: 0 }}>
-              AHV exists to study this system rigorously, document its practitioners, and position AIS within the global academy as a field of inquiry equal in standing to any other tradition of human knowledge.
+            <p style={{ fontSize: 17.5, lineHeight: 1.75, color: "#5e4742", margin: "0 0 24px" }}>
+              As Africa is recognised as the origin of humanity, it follows that African Indigenous Spirituality represents the <strong style={{ color: "var(--ahv-ink)" }}>earliest expression of Spirit within human existence</strong>.
             </p>
+            <div style={{ margin: "0 0 24px", paddingLeft: 20 }}>
+              <p style={{ fontSize: 16, lineHeight: 1.7, color: "#5e4742", margin: "0 0 10px" }}>From this foundation:</p>
+              <ul style={{ margin: 0, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
+                <li style={{ fontSize: 16, lineHeight: 1.65, color: "#5e4742" }}>Global spiritual practices emerge as <strong style={{ color: "var(--ahv-ink)" }}>expressions developed over time</strong></li>
+                <li style={{ fontSize: 16, lineHeight: 1.65, color: "#5e4742" }}>Spiritual diversity reflects <strong style={{ color: "var(--ahv-ink)" }}>variation from an original source</strong>, not fragmentation</li>
+              </ul>
+            </div>
+            <blockquote style={{ margin: 0, padding: "20px 24px", background: "var(--ahv-gold-band)", borderLeft: "3px solid var(--ahv-gold)", borderRadius: "0 6px 6px 0", fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 19, lineHeight: 1.5, color: "var(--ahv-oxblood-deep)", fontWeight: 500 }}>
+              The restoration of African Indigenous Spirituality contributes to the restoration of the universal concept of spirituality.
+            </blockquote>
           </Reveal>
           <Reveal delay={140}>
             <div style={{ borderRadius: 10, overflow: "hidden", border: "1px solid rgba(110,19,22,.14)", aspectRatio: "4/3" }}>
@@ -115,20 +129,22 @@ export default function Home() {
       <section style={{ background: "var(--ahv-parchment-2)", padding: "110px 40px" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <Reveal>
-            <div style={{ maxWidth: 620, marginBottom: 58 }}>
-              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>What We Do</div>
-              <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,40px)", lineHeight: 1.12, margin: 0, color: "var(--ahv-ink)" }}>Four pillars of AIS research and engagement.</h2>
+            <div style={{ maxWidth: 700, marginBottom: 58 }}>
+              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>What AHV Does</div>
+              <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(26px,3.5vw,38px)", lineHeight: 1.2, margin: "0 0 18px", color: "var(--ahv-ink)" }}>
+                Operating at the intersection of Spirit, revelation, and institutional engagement.
+              </h2>
+              <p style={{ fontSize: 17, lineHeight: 1.7, color: "#5e4742", margin: 0 }}>
+                The African Hidden Voices (AHV) ensures that African Indigenous Spirituality is:
+              </p>
             </div>
           </Reveal>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 22 }}>
-            {pillars.map(({ icon: Icon, title, body }, i) => (
-              <Reveal key={title} delay={i * 90}>
-                <div style={{ background: "var(--ahv-parchment)", border: "1px solid rgba(110,19,22,.12)", borderRadius: 10, padding: "34px 28px", display: "flex", flexDirection: "column", gap: 18, height: "100%" }}>
-                  <div style={{ width: 52, height: 52, borderRadius: "50%", background: "var(--ahv-oxblood)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--ahv-gold-soft)" }}>
-                    <Icon size={24} strokeWidth={1.6} />
-                  </div>
-                  <h3 style={{ fontFamily: "var(--font-spectral)", fontWeight: 600, fontSize: 21, margin: 0, color: "var(--ahv-ink)" }}>{title}</h3>
-                  <p style={{ fontSize: 15.5, lineHeight: 1.65, color: "#5e4742", margin: 0 }}>{body}</p>
+            {mandate.map(({ label, suffix }, i) => (
+              <Reveal key={label} delay={i * 80}>
+                <div style={{ background: "var(--ahv-parchment)", border: "1px solid rgba(110,19,22,.12)", borderRadius: 10, padding: "34px 28px", borderTop: "3px solid var(--ahv-gold)", height: "100%" }}>
+                  <h3 style={{ fontFamily: "var(--font-spectral)", fontWeight: 600, fontSize: 24, margin: "0 0 10px", color: "var(--ahv-crimson)" }}>{label}</h3>
+                  <p style={{ fontSize: 16, lineHeight: 1.6, color: "#5e4742", margin: 0, fontFamily: "var(--font-spectral)", fontStyle: "italic" }}>{label}{suffix}</p>
                 </div>
               </Reveal>
             ))}
@@ -147,12 +163,37 @@ export default function Home() {
           <Reveal delay={120}>
             <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 22 }}>The Founder</div>
             <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: 40, lineHeight: 1.12, margin: "0 0 10px", color: "var(--ahv-ink)" }}>iNkosi yamaKhosi oMoya</h2>
-            <p style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 24, color: "var(--ahv-crimson)", margin: "0 0 28px" }}>Imboni Dr. uZwi-Lezwe Radebe</p>
-            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#5e4742", margin: "0 0 22px" }}>From divine inspiration emerged a global institution. Imboni Dr. Radebe recognised that African Indigenous Spirituality could not be preserved through memory alone — it required the full force of academic rigour, institutional legitimacy, and cross-disciplinary research to secure its place in the modern world.</p>
+            <p style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 24, color: "var(--ahv-crimson)", margin: "0 0 28px" }}>HSRM Imboni Dr. Uzwi Lezwe Radebe</p>
+            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#5e4742", margin: "0 0 22px" }}>
+              The African Hidden Voices was established through the revelation of HSRM Imboni Dr. Uzwi Lezwe Radebe as part of a broader restoration mandate — repositioning African Indigenous Spirituality as a living, revealed, and foundational expression of Spirit within human existence.
+            </p>
             <blockquote style={{ margin: 0, padding: "22px 0 22px 28px", borderLeft: "3px solid var(--ahv-gold)", fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 26, lineHeight: 1.4, color: "var(--ahv-crimson)" }}>
               "Spirituality must lead."
             </blockquote>
           </Reveal>
+        </div>
+      </section>
+
+      {/* OUR GLOBAL POSITION */}
+      <section style={{ background: "var(--ahv-oxblood)", color: "var(--ahv-cream)", padding: "110px 40px" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <Reveal>
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-gold)", marginBottom: 22 }}>Our Global Position</div>
+            <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 400, fontSize: "clamp(26px,3.5vw,40px)", lineHeight: 1.2, margin: "0 0 24px" }}>
+              AHV does not engage spirituality as a regional or cultural construct, but as a{" "}
+              <em style={{ color: "var(--ahv-gold-soft)" }}>universal human reality with a definable origin.</em>
+            </h2>
+            <p style={{ fontSize: 17, lineHeight: 1.7, color: "rgba(245,231,192,.8)", margin: "0 0 40px" }}>Through this position, AHV:</p>
+          </Reveal>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px,1fr))", gap: 24 }}>
+            {globalPosition.map((item, i) => (
+              <Reveal key={i} delay={i * 90}>
+                <div style={{ borderTop: "2px solid rgba(201,162,75,.5)", paddingTop: 22 }}>
+                  <p style={{ fontSize: 17, lineHeight: 1.65, color: "rgba(245,231,192,.85)", margin: 0 }}>{item}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -164,7 +205,7 @@ export default function Home() {
               <div style={{ maxWidth: 640 }}>
                 <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>The IImboni Database</div>
                 <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,42px)", lineHeight: 1.1, margin: "0 0 16px", color: "var(--ahv-ink)" }}>Documenting Africa's prophetic tradition.</h2>
-                <p style={{ fontSize: 17, lineHeight: 1.7, color: "#5e4742", margin: 0 }}>A growing academic archive of IImboni, Kings, and spiritual authorities — each entry a rigorous research record establishing their lives, teachings, and significance within the AIS canon.</p>
+                <p style={{ fontSize: 17, lineHeight: 1.7, color: "#5e4742", margin: 0 }}>A growing research archive of IImboni, Spirit Kings, and spiritual leaders — each entry grounded in field documentation, oral testimony, and archival evidence.</p>
               </div>
               <Link href="/archive" style={{ display: "inline-flex", alignItems: "center", gap: 9, fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 13.5, letterSpacing: ".04em", color: "var(--ahv-crimson)", borderBottom: "1px solid var(--ahv-gold)", paddingBottom: 5 }}>
                 Enter the database <ArrowRight size={15} strokeWidth={2} />
@@ -294,15 +335,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COLLABORATE CTA */}
+      {/* PARTNER CTA */}
       <section style={{ background: "var(--ahv-parchment-2)", color: "var(--ahv-ink)", padding: "120px 40px", textAlign: "center" }}>
         <Reveal>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 24 }}>Institutional Collaboration</div>
-            <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(33px,4vw,48px)", lineHeight: 1.1, margin: "0 0 22px", color: "var(--ahv-ink)" }}>Advance AIS research with us.</h2>
-            <p style={{ fontSize: 18, lineHeight: 1.7, color: "#5e4742", margin: "0 0 40px" }}>We partner with universities, research bodies, governments, and cultural institutions to establish African Indigenous Spirituality as a recognised academic discipline on the global stage.</p>
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 24 }}>Partner With AHV</div>
+            <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(33px,4vw,48px)", lineHeight: 1.1, margin: "0 0 22px", color: "var(--ahv-ink)" }}>Advance AIS on the world stage.</h2>
+            <p style={{ fontSize: 18, lineHeight: 1.7, color: "#5e4742", margin: "0 0 40px" }}>AHV works closely with spiritual institutions, academic institutions, financial institutions, government bodies, and interdisciplinary research sectors. Its role is to inform, educate, guide, clarify, conscientise, and restore spiritual understanding within both African and global institutional contexts.</p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center" }}>
-              <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-crimson)", color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "17px 32px", borderRadius: 999 }}>Collaborate with AHV</Link>
+              <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-crimson)", color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "17px 32px", borderRadius: 999 }}>Partner With AHV</Link>
               <Link href="/areas-of-study" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "var(--ahv-crimson)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, letterSpacing: ".04em", padding: "17px 30px", border: "1.5px solid var(--ahv-crimson)", borderRadius: 999 }}>Explore Areas of Study</Link>
             </div>
           </div>
