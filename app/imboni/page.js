@@ -30,7 +30,7 @@ export default function Imboni() {
             <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>The Founder</div>
             <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(32px,4vw,48px)", lineHeight: 1.08, margin: "0 0 8px", color: "var(--ahv-ink)" }}>iNkosi yamaKhosi oMoya</h1>
             <p style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 26, color: "var(--ahv-crimson)", margin: "0 0 26px" }}>Imboni Dr. uZwi-Lezwe Radebe</p>
-            <p style={{ fontSize: 17.5, lineHeight: 1.75, color: "#5e4742", margin: 0 }}>Spiritual guide of immaculate foresight and indigenous wisdom, founder of African Hidden Voices and The Revelation Spiritual Home — designated, his followers hold, by the Creator UMfihlakalo to guide a nation from a lineage of IImboni as old as Africa itself.</p>
+            <p style={{ fontSize: 17.5, lineHeight: 1.75, color: "#5e4742", margin: 0 }}>Imboni Dr. uZwi-Lezwe Radebe is the founder and principal research authority of African Hidden Voices — the institution he established to give African Indigenous Spirituality its rightful place in global academic discourse. Designated by the Creator UMfihlakalo, he leads from a lineage of IImboni as old as Africa itself.</p>
           </Reveal>
         </div>
       </header>

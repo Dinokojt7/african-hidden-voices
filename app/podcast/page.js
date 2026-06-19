@@ -21,9 +21,9 @@ export default function PodcastPage() {
       <header style={{ padding: "84px 40px 70px", borderBottom: "1px solid rgba(110,19,22,.1)" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
           <Reveal>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 20 }}>The AHV Podcast</div>
-            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(36px,5vw,56px)", lineHeight: 1.08, letterSpacing: "-.01em", margin: "0 0 24px", color: "var(--ahv-ink)", maxWidth: 800 }}>Listen to the hidden voices.</h1>
-            <p style={{ fontSize: 19, lineHeight: 1.7, color: "#5e4742", maxWidth: 640, margin: "0 0 32px" }}>In-depth conversations with researchers, spiritual leaders, and historians about Africa's suppressed prophetic tradition.</p>
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 20 }}>AHV Dialogue Series</div>
+            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(36px,5vw,56px)", lineHeight: 1.08, letterSpacing: "-.01em", margin: "0 0 24px", color: "var(--ahv-ink)", maxWidth: 800 }}>#UnmaskingAfricanTruths — AIS in conversation.</h1>
+            <p style={{ fontSize: 19, lineHeight: 1.7, color: "#5e4742", maxWidth: 640, margin: "0 0 32px" }}>Long-form research dialogues with AIS scholars, practitioners, and institutional voices — exploring African Indigenous Spirituality as a living academic field.</p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
               {platforms.map((p) => (
                 <div key={p} style={{ display: "inline-flex", alignItems: "center", gap: 9, fontFamily: "var(--font-hanken)", fontSize: 14, fontWeight: 600, color: "var(--ahv-ink)", padding: "12px 20px", border: "1.5px solid rgba(110,19,22,.25)", borderRadius: 999 }}>

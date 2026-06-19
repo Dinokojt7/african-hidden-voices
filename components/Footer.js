@@ -8,7 +8,7 @@ export default function Footer() {
       <div style={{ maxWidth: 1240, margin: "0 auto", display: "grid", gridTemplateColumns: "1.6fr 1fr 1fr 1.2fr", gap: 48 }} className="footer-grid">
         <div>
           <Link href="/"><Image src="/logo.png" alt="African Hidden Voices" width={360} height={120} style={{ height: 120, width: "auto", marginBottom: 20, display: "block", mixBlendMode: "multiply" }} /></Link>
-          <p style={{ fontSize: 14.5, lineHeight: 1.7, color: "#5e4742", maxWidth: 300, margin: 0 }}>A pan-African research institution reviving the voices of our IImboni, Kings and spiritual leaders. An initiative of The Revelation Spiritual Home.</p>
+          <p style={{ fontSize: 14.5, lineHeight: 1.7, color: "#5e4742", maxWidth: 300, margin: 0 }}>A global academic research institution dedicated to the study, documentation, and advancement of African Indigenous Spirituality (AIS). An initiative of The Revelation Spiritual Home.</p>
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-hanken)", fontSize: 12, fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--ahv-crimson)", margin: "0 0 18px" }}>Explore</h4>
@@ -16,13 +16,13 @@ export default function Footer() {
             <Link href="/about">About</Link>
             <Link href="/imboni">The Imboni</Link>
             <Link href="/archive">The Archive</Link>
-            <Link href="/events">Events</Link>
+            <Link href="/areas-of-study">Areas of Study</Link>
           </div>
         </div>
         <div>
           <h4 style={{ fontFamily: "var(--font-hanken)", fontSize: 12, fontWeight: 600, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--ahv-crimson)", margin: "0 0 18px" }}>Media</h4>
           <div style={{ display: "flex", flexDirection: "column", gap: 11, fontFamily: "var(--font-hanken)", fontSize: 14, color: "#5e4742" }}>
-            <Link href="/publications">Publications</Link>
+            <Link href="/research">Research</Link>
             <a href="https://www.youtube.com/@africanhiddenvoicesunmaski830" target="_blank" rel="noopener noreferrer">YouTube</a>
             <a href="#">Facebook</a>
           </div>

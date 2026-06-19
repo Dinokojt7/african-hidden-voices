@@ -39,9 +39,9 @@ export default function Archive() {
       <header style={{ padding: "84px 40px 70px", borderBottom: "1px solid rgba(110,19,22,.1)" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
           <Reveal>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 20 }}>The Archive</div>
-            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(36px,5vw,56px)", lineHeight: 1.08, letterSpacing: "-.01em", margin: "0 0 24px", color: "var(--ahv-ink)", maxWidth: 800 }}>The recovered voices of Africa.</h1>
-            <p style={{ fontSize: 19, lineHeight: 1.7, color: "#5e4742", maxWidth: 640, margin: "0 0 36px" }}>A living archive of IImboni, prophets, kings, and spiritual leaders whose stories were buried. Each entry is the result of field research, oral testimony, and academic collaboration.</p>
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 20 }}>The IImboni Database</div>
+            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(36px,5vw,56px)", lineHeight: 1.08, letterSpacing: "-.01em", margin: "0 0 24px", color: "var(--ahv-ink)", maxWidth: 800 }}>Documenting Africa's prophetic tradition.</h1>
+            <p style={{ fontSize: 19, lineHeight: 1.7, color: "#5e4742", maxWidth: 640, margin: "0 0 36px" }}>A growing academic database of IImboni, prophets, kings, and spiritual authorities — each entry a rigorous research record grounded in field documentation, oral testimony, and archival evidence.</p>
             <div style={{ display: "flex", alignItems: "center", gap: 14, background: "var(--ahv-parchment-2)", border: "1.5px solid rgba(110,19,22,.2)", borderRadius: 10, padding: "0 18px", maxWidth: 500 }}>
               <Search size={18} color="var(--ahv-muted,#7a635e)" />
               <input

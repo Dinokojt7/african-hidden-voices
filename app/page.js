@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Play, Search, MessageCircle, BookOpen, GraduationCap } from "lucide-react";
+import { ArrowRight, Play, Search, BookOpen, GraduationCap, Globe } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const archive = [
@@ -20,19 +20,11 @@ const books = [
   { title: "Voices of the Ancestors", author: "AHV Press · Research Compendium", year: "2025", img: "/g14.jpg" },
 ];
 
-const events = [
-  { date: "DEC 2025", title: "Indigenous Knowledge Systems Conference", place: "University of Fort Hare · Eastern Cape", status: "Past" },
-  { date: "MAR 2026", title: "AHV Annual Dialogue of the IImboni", place: "Johannesburg, South Africa", status: "Upcoming" },
-  { date: "JUL 2026", title: "Restoring Africa's Spiritual Identity — Book Tour", place: "Pan-African · Multiple cities", status: "Upcoming" },
-];
-
-const partners = ["University of Fort Hare", "The Revelation Spiritual Home", "HJ International Graduate School", "Isambulo Communications", "AHV Research Team"];
-
 const pillars = [
-  { icon: Search, title: "Research & Documentation", body: "A team of young researchers searching every nook and cranny of Southern Africa for the forgotten IImboni." },
-  { icon: MessageCircle, title: "The Dialogue Platform", body: "Assuring the voices of our IImboni are no longer suppressed — reviving their interaction and advisory role." },
-  { icon: GraduationCap, title: "Conferences & IKS", body: "Advancing Indigenous Knowledge Systems through scholarship, in partnership with leading universities." },
-  { icon: BookOpen, title: "Publishing & Media", body: "Books, podcasts and broadcasts that return African spiritual wisdom to the public record." },
+  { icon: Search, title: "Documentation & Archival Recovery", body: "A dedicated team of researchers locating, verifying, and preserving the records of Africa's IImboni, prophets, and spiritual authorities." },
+  { icon: BookOpen, title: "Academic Research & Publishing", body: "Producing peer-reviewed scholarship, monographs, and institutional papers that establish AIS as a rigorous field of study." },
+  { icon: Globe, title: "Institutional Engagement", body: "Partnering with universities, governments, and global bodies to advance AIS within official academic and policy frameworks." },
+  { icon: GraduationCap, title: "AIS Education & Dialogue", body: "Conferences, podcasts, and public programmes that bring AIS knowledge to communities, scholars, and practitioners worldwide." },
 ];
 
 export default function Home() {
@@ -41,32 +33,27 @@ export default function Home() {
       {/* HERO */}
       <header style={{ position: "relative", color: "var(--ahv-cream)", overflow: "hidden", background: "radial-gradient(120% 120% at 78% 8%, #5c1013 0%, var(--ahv-oxblood) 42%, var(--ahv-oxblood-deep) 100%)" }}>
         <img src="/6.jpg" alt="" aria-hidden="true" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", opacity: 0.10, display: "block", pointerEvents: "none" }} />
-        {/* diagonal line texture */}
         <div style={{ position: "absolute", inset: 0, opacity: 0.09, backgroundImage: "repeating-linear-gradient(135deg, rgba(245,231,192,.5) 0 1px, transparent 1px 26px)", pointerEvents: "none" }} />
-        {/* gold glow top-right */}
         <div style={{ position: "absolute", top: -140, right: -120, width: 560, height: 560, borderRadius: "50%", background: "radial-gradient(circle, rgba(201,162,75,.20), transparent 66%)", pointerEvents: "none" }} />
 
         <div className="r-pad" style={{ position: "relative", maxWidth: 1240, margin: "0 auto", padding: "60px 40px 64px" }}>
-          {/* EYEBROW + FULL-WIDTH HEADLINE */}
           <Reveal>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-gold)", marginBottom: 28 }}>
-              <span style={{ width: 30, height: 1, background: "var(--ahv-gold)" }} />Unmasking African Truths
+              <span style={{ width: 30, height: 1, background: "var(--ahv-gold)" }} />African Hidden Voices — Global Research Institution
             </div>
             <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(38px,5.5vw,72px)", lineHeight: 1.03, letterSpacing: "-.015em", margin: "0 0 52px" }}>
-              The voices Africa was told to forget are{" "}
-              <em style={{ fontStyle: "italic", color: "var(--ahv-gold-soft)" }}>speaking again.</em>
+              African Indigenous Spirituality is not a relic —{" "}
+              <em style={{ fontStyle: "italic", color: "var(--ahv-gold-soft)" }}>it is a living, researchable science.</em>
             </h1>
           </Reveal>
 
-          {/* TWO-COL: description LEFT, framed photo RIGHT */}
           <div className="r-two-col" style={{ display: "grid", gridTemplateColumns: ".75fr 1.25fr", gap: 52, alignItems: "center", marginBottom: 40 }}>
             <Reveal delay={100}>
               <p style={{ fontFamily: "var(--font-spectral)", fontSize: 18.5, lineHeight: 1.66, color: "rgba(245,231,192,.85)", fontWeight: 300, margin: 0 }}>
-                African Hidden Voices is a pan-African research institution retracing the IImboni, Kings and spiritual leaders whose wisdom colonialism tried to erase — and restoring their rightful place in the future of the Continent.
+                African Hidden Voices is a global research institution dedicated to the academic study, documentation, and advancement of African Indigenous Spirituality (AIS) — establishing it as a legitimate and rigorous field of intellectual inquiry on the world stage.
               </p>
             </Reveal>
 
-            {/* RIGHT — gold-framed photo */}
             <Reveal delay={200}>
               <div style={{ position: "relative" }}>
                 <div style={{ position: "absolute", inset: -14, borderRadius: 18, background: "radial-gradient(circle at 70% 30%, rgba(201,162,75,.22), transparent 70%)", pointerEvents: "none" }} />
@@ -84,15 +71,14 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* BUTTONS — full-width row below, left-aligned */}
           <Reveal delay={280}>
             <div style={{ display: "inline-flex", flexWrap: "wrap", gap: 16, alignItems: "center" }}>
-              <Link href="/archive" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-gold)", color: "var(--ahv-oxblood-deep)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "16px 28px", borderRadius: 999, whiteSpace: "nowrap" }}>
-                Explore the Archive <ArrowRight size={17} strokeWidth={2.2} />
+              <Link href="/about" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-gold)", color: "var(--ahv-oxblood-deep)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "16px 28px", borderRadius: 999, whiteSpace: "nowrap" }}>
+                Explore the Framework <ArrowRight size={17} strokeWidth={2.2} />
               </Link>
-              <a href="https://www.youtube.com/@africanhiddenvoicesunmaski830" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, letterSpacing: ".04em", padding: "16px 22px", border: "1px solid rgba(245,231,192,.35)", borderRadius: 999, whiteSpace: "nowrap" }}>
-                <Play size={15} fill="currentColor" stroke="none" /> Watch the Podcast
-              </a>
+              <Link href="/archive" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, letterSpacing: ".04em", padding: "16px 22px", border: "1px solid rgba(245,231,192,.35)", borderRadius: 999, whiteSpace: "nowrap" }}>
+                Enter the Archive <ArrowRight size={15} strokeWidth={2} />
+              </Link>
             </div>
           </Reveal>
         </div>
@@ -100,37 +86,38 @@ export default function Home() {
         <div style={{ height: 6, background: "linear-gradient(90deg, var(--ahv-gold-soft), var(--ahv-gold), var(--ahv-crimson))" }} />
       </header>
 
-      {/* VISION */}
+      {/* WHAT IS AIS */}
       <section style={{ background: "var(--ahv-parchment)", padding: "120px 40px" }}>
-        <div style={{ maxWidth: 1000, margin: "0 auto", textAlign: "center" }}>
+        <div className="r-two-col" style={{ maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 72, alignItems: "center" }}>
           <Reveal>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 10, fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 30 }}>
-              <span style={{ width: 30, height: 1, background: "var(--ahv-gold)" }} />Our Vision<span style={{ width: 30, height: 1, background: "var(--ahv-gold)" }} />
-            </div>
-            <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 400, fontSize: "clamp(29px,4vw,42px)", lineHeight: 1.28, letterSpacing: "-.01em", margin: "0 0 36px", color: "var(--ahv-ink)" }}>
-              To retrace the steps and works of our gallant IImboni — and to{" "}
-              <span style={{ color: "var(--ahv-crimson)", fontStyle: "italic" }}>resuscitate the authenticity</span>{" "}
-              of their gifts, past and present, across the Continent.
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 22 }}>What is AIS?</div>
+            <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 400, fontSize: "clamp(29px,4vw,42px)", lineHeight: 1.28, letterSpacing: "-.01em", margin: "0 0 28px", color: "var(--ahv-ink)" }}>
+              A cosmological, philosophical, and{" "}
+              <span style={{ color: "var(--ahv-crimson)", fontStyle: "italic" }}>governance system</span>{" "}
+              encoded in Africa's spiritual traditions.
             </h2>
-            <p style={{ fontSize: 17.5, lineHeight: 1.75, color: "#5e4742", maxWidth: 760, margin: "0 auto 30px" }}>
-              The origins of African Hidden Voices emanate from the divine and visionary inspiration of Imboni Dr. uZwi-Lezwe Radebe. Foreign influences and the passage of time drew a cloud of doubt over our African trailblazers. We exist to lift that cloud — so the voices of these gallant IImboni are no longer suppressed, and their counsel to our nations is revived.
+            <p style={{ fontSize: 17.5, lineHeight: 1.75, color: "#5e4742", margin: "0 0 20px" }}>
+              African Indigenous Spirituality is not a religion, not a cultural curiosity, and not a relic of the past. It is a complete system of thought — governing how communities organise, how knowledge is transmitted, how justice is administered, and how human beings relate to the cosmos.
             </p>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 14, marginTop: 14, fontFamily: "var(--font-hanken)" }}>
-              <span style={{ width: 44, height: 1, background: "var(--ahv-gold)" }} />
-              <span style={{ fontSize: 13, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--ahv-ink)" }}>Imboni Dr. uZwi-Lezwe Radebe · Founder</span>
-              <span style={{ width: 44, height: 1, background: "var(--ahv-gold)" }} />
+            <p style={{ fontSize: 17.5, lineHeight: 1.75, color: "#5e4742", margin: 0 }}>
+              AHV exists to study this system rigorously, document its practitioners, and position AIS within the global academy as a field of inquiry equal in standing to any other tradition of human knowledge.
+            </p>
+          </Reveal>
+          <Reveal delay={140}>
+            <div style={{ borderRadius: 10, overflow: "hidden", border: "1px solid rgba(110,19,22,.14)", aspectRatio: "4/3" }}>
+              <img src="/6.jpg" alt="African spiritual tradition" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* OUR WORK */}
+      {/* WHAT AHV DOES */}
       <section style={{ background: "var(--ahv-parchment-2)", padding: "110px 40px" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <Reveal>
             <div style={{ maxWidth: 620, marginBottom: 58 }}>
               <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>What We Do</div>
-              <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,40px)", lineHeight: 1.12, margin: 0, color: "var(--ahv-ink)" }}>Four ways we return African wisdom to the record.</h2>
+              <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,40px)", lineHeight: 1.12, margin: 0, color: "var(--ahv-ink)" }}>Four pillars of AIS research and engagement.</h2>
             </div>
           </Reveal>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 22 }}>
@@ -161,7 +148,7 @@ export default function Home() {
             <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 22 }}>The Founder</div>
             <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: 40, lineHeight: 1.12, margin: "0 0 10px", color: "var(--ahv-ink)" }}>iNkosi yamaKhosi oMoya</h2>
             <p style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 24, color: "var(--ahv-crimson)", margin: "0 0 28px" }}>Imboni Dr. uZwi-Lezwe Radebe</p>
-            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#5e4742", margin: "0 0 22px" }}>A prophet is an inspired preacher who speaks for God; an IMboni is more. The IMboni is a spiritual guide of immaculate foresight and indigenous wisdom — designated by the Creator, UMfihlakalo, to guide a whole nation, from a lineage of IImboni stretching back through Africa's deepest memory.</p>
+            <p style={{ fontSize: 17, lineHeight: 1.75, color: "#5e4742", margin: "0 0 22px" }}>From divine inspiration emerged a global institution. Imboni Dr. Radebe recognised that African Indigenous Spirituality could not be preserved through memory alone — it required the full force of academic rigour, institutional legitimacy, and cross-disciplinary research to secure its place in the modern world.</p>
             <blockquote style={{ margin: 0, padding: "22px 0 22px 28px", borderLeft: "3px solid var(--ahv-gold)", fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 26, lineHeight: 1.4, color: "var(--ahv-crimson)" }}>
               "Spirituality must lead."
             </blockquote>
@@ -169,18 +156,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ARCHIVE PREVIEW */}
+      {/* IIMBONI DATABASE PREVIEW */}
       <section style={{ background: "var(--ahv-parchment)", padding: "120px 40px" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <Reveal>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 24, marginBottom: 56 }}>
               <div style={{ maxWidth: 640 }}>
-                <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>The Hidden Voices</div>
-                <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,42px)", lineHeight: 1.1, margin: "0 0 16px", color: "var(--ahv-ink)" }}>Restoring the names history buried.</h2>
-                <p style={{ fontSize: 17, lineHeight: 1.7, color: "#5e4742", margin: 0 }}>Our researchers assemble the IImboni, Kings and spiritual leaders of Southern Africa under one roof — to give them the honour and study they were long denied.</p>
+                <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>The IImboni Database</div>
+                <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,42px)", lineHeight: 1.1, margin: "0 0 16px", color: "var(--ahv-ink)" }}>Documenting Africa's prophetic tradition.</h2>
+                <p style={{ fontSize: 17, lineHeight: 1.7, color: "#5e4742", margin: 0 }}>A growing academic archive of IImboni, Kings, and spiritual authorities — each entry a rigorous research record establishing their lives, teachings, and significance within the AIS canon.</p>
               </div>
               <Link href="/archive" style={{ display: "inline-flex", alignItems: "center", gap: 9, fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 13.5, letterSpacing: ".04em", color: "var(--ahv-crimson)", borderBottom: "1px solid var(--ahv-gold)", paddingBottom: 5 }}>
-                View the full archive <ArrowRight size={15} strokeWidth={2} />
+                Enter the database <ArrowRight size={15} strokeWidth={2} />
               </Link>
             </div>
           </Reveal>
@@ -197,7 +184,7 @@ export default function Home() {
                     <p style={{ fontFamily: "var(--font-hanken)", fontSize: 13.5, color: "#7a635e", margin: "0 0 10px" }}>{person.dates} &nbsp;·&nbsp; {person.region}</p>
                     <p style={{ fontSize: 14.5, lineHeight: 1.6, color: "#5e4742", margin: "0 0 18px" }}>{person.desc}</p>
                     <Link href="/archive" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 13, color: "var(--ahv-crimson)" }}>
-                      Read the research <ArrowRight size={14} strokeWidth={2} />
+                      View research record <ArrowRight size={14} strokeWidth={2} />
                     </Link>
                   </div>
                 </div>
@@ -217,11 +204,11 @@ export default function Home() {
             </div>
             <div style={{ borderLeft: "1px solid rgba(110,19,22,.2)", borderRight: "1px solid rgba(110,19,22,.2)" }}>
               <div style={{ fontFamily: "var(--font-cinzel)", fontWeight: 600, fontSize: "clamp(44px,6vw,60px)", lineHeight: 1, color: "var(--ahv-crimson)" }}>9</div>
-              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 13, letterSpacing: ".14em", textTransform: "uppercase", color: "#6b4a2f", marginTop: 12 }}>University &amp; community conferences</div>
+              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 13, letterSpacing: ".14em", textTransform: "uppercase", color: "#6b4a2f", marginTop: 12 }}>Academic conferences hosted</div>
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-cinzel)", fontWeight: 600, fontSize: "clamp(44px,6vw,60px)", lineHeight: 1, color: "var(--ahv-crimson)" }}>50<span style={{ fontSize: "55%" }}>+</span></div>
-              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 13, letterSpacing: ".14em", textTransform: "uppercase", color: "#6b4a2f", marginTop: 12 }}>Podcast episodes published</div>
+              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 13, letterSpacing: ".14em", textTransform: "uppercase", color: "#6b4a2f", marginTop: 12 }}>Research dialogues published</div>
             </div>
           </div>
         </Reveal>
@@ -232,8 +219,9 @@ export default function Home() {
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <Reveal>
             <div style={{ maxWidth: 640, marginBottom: 54 }}>
-              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>AHV Podcast</div>
-              <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,40px)", lineHeight: 1.12, margin: 0, color: "var(--ahv-ink)" }}>#UnmaskingAfricanTruths, in conversation.</h2>
+              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>AHV Dialogue Series</div>
+              <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,40px)", lineHeight: 1.12, margin: "0 0 16px", color: "var(--ahv-ink)" }}>#UnmaskingAfricanTruths — AIS in conversation.</h2>
+              <p style={{ fontSize: 16.5, lineHeight: 1.7, color: "#5e4742", margin: 0 }}>Long-form research dialogues with practitioners, scholars, and institutional voices exploring the full depth of African Indigenous Spirituality.</p>
             </div>
           </Reveal>
           <div className="r-two-col" style={{ display: "grid", gridTemplateColumns: "1.15fr .85fr", gap: 30, alignItems: "stretch" }}>
@@ -269,13 +257,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PUBLICATIONS */}
+      {/* RESEARCH */}
       <section style={{ background: "var(--ahv-parchment)", padding: "120px 40px" }}>
         <div style={{ maxWidth: 1240, margin: "0 auto" }}>
           <Reveal>
             <div style={{ maxWidth: 640, marginBottom: 54 }}>
-              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>Publications</div>
-              <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,40px)", lineHeight: 1.12, margin: 0, color: "var(--ahv-ink)" }}>The research, bound and shared.</h2>
+              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>Research & Publications</div>
+              <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,40px)", lineHeight: 1.12, margin: 0, color: "var(--ahv-ink)" }}>AIS scholarship, bound and shared.</h2>
             </div>
           </Reveal>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 34 }}>
@@ -296,60 +284,26 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* EVENTS */}
-      <section style={{ background: "var(--ahv-parchment-2)", padding: "110px 40px" }}>
-        <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-          <Reveal>
-            <div style={{ marginBottom: 48 }}>
-              <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 18 }}>Gatherings</div>
-              <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(29px,4vw,40px)", lineHeight: 1.12, margin: 0, color: "var(--ahv-ink)" }}>Where the dialogue happens.</h2>
+          <Reveal delay={100}>
+            <div style={{ marginTop: 48, textAlign: "center" }}>
+              <Link href="/research" style={{ display: "inline-flex", alignItems: "center", gap: 9, fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 13.5, color: "var(--ahv-crimson)", borderBottom: "1px solid var(--ahv-gold)", paddingBottom: 5 }}>
+                View all research & publications <ArrowRight size={15} strokeWidth={2} />
+              </Link>
             </div>
           </Reveal>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            {events.map((ev) => (
-              <Reveal key={ev.title}>
-                <div style={{ display: "grid", gridTemplateColumns: "120px 1fr auto", gap: 28, alignItems: "center", padding: "26px 8px", borderTop: "1px solid rgba(110,19,22,.16)" }}>
-                  <div style={{ fontFamily: "var(--font-cinzel)", fontWeight: 600, fontSize: 17, letterSpacing: ".04em", color: "var(--ahv-crimson)" }}>{ev.date}</div>
-                  <div>
-                    <h3 style={{ fontFamily: "var(--font-spectral)", fontWeight: 600, fontSize: 22, margin: "0 0 5px", color: "var(--ahv-ink)" }}>{ev.title}</h3>
-                    <p style={{ fontFamily: "var(--font-hanken)", fontSize: 14, color: "#7a635e", margin: 0 }}>{ev.place}</p>
-                  </div>
-                  <span style={{ fontFamily: "var(--font-hanken)", fontSize: 11.5, fontWeight: 600, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--ahv-oxblood-deep)", background: "var(--ahv-gold-soft)", padding: "7px 14px", borderRadius: 999, whiteSpace: "nowrap" }}>{ev.status}</span>
-                </div>
-              </Reveal>
-            ))}
-            <div style={{ borderTop: "1px solid rgba(110,19,22,.16)" }} />
-          </div>
         </div>
       </section>
 
-      {/* PARTNERS */}
-      <section style={{ background: "var(--ahv-parchment)", padding: "80px 40px" }}>
-        <Reveal>
-          <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "center" }}>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12, fontWeight: 600, letterSpacing: ".2em", textTransform: "uppercase", color: "#a08a84", marginBottom: 38 }}>In partnership with</div>
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 24 }}>
-              {partners.map((p) => (
-                <div key={p} style={{ height: 58, minWidth: 170, flex: 1, maxWidth: 210, border: "1px solid rgba(110,19,22,.14)", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-hanken)", fontSize: 13, fontWeight: 600, letterSpacing: ".04em", color: "#8a726c", padding: "0 18px", textAlign: "center" }}>{p}</div>
-              ))}
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* JOIN CTA */}
+      {/* COLLABORATE CTA */}
       <section style={{ background: "var(--ahv-parchment-2)", color: "var(--ahv-ink)", padding: "120px 40px", textAlign: "center" }}>
         <Reveal>
           <div style={{ maxWidth: 760, margin: "0 auto" }}>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 24 }}>Join the Dialogue</div>
-            <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(33px,4vw,48px)", lineHeight: 1.1, margin: "0 0 22px", color: "var(--ahv-ink)" }}>Help us bring the Hidden Voices home.</h2>
-            <p style={{ fontSize: 18, lineHeight: 1.7, color: "#5e4742", margin: "0 0 40px" }}>Partner with our research, attend our gatherings, or support the work of returning African spiritual wisdom to its rightful place.</p>
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 24 }}>Institutional Collaboration</div>
+            <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(33px,4vw,48px)", lineHeight: 1.1, margin: "0 0 22px", color: "var(--ahv-ink)" }}>Advance AIS research with us.</h2>
+            <p style={{ fontSize: 18, lineHeight: 1.7, color: "#5e4742", margin: "0 0 40px" }}>We partner with universities, research bodies, governments, and cultural institutions to establish African Indigenous Spirituality as a recognised academic discipline on the global stage.</p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 16, justifyContent: "center" }}>
-              <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-crimson)", color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "17px 32px", borderRadius: 999 }}>Become a member</Link>
-              <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "var(--ahv-crimson)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, letterSpacing: ".04em", padding: "17px 30px", border: "1.5px solid var(--ahv-crimson)", borderRadius: 999 }}>Support the research</Link>
+              <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-crimson)", color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "17px 32px", borderRadius: 999 }}>Collaborate with AHV</Link>
+              <Link href="/areas-of-study" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "var(--ahv-crimson)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, letterSpacing: ".04em", padding: "17px 30px", border: "1.5px solid var(--ahv-crimson)", borderRadius: 999 }}>Explore Areas of Study</Link>
             </div>
           </div>
         </Reveal>

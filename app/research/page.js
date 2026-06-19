@@ -11,9 +11,9 @@ const books = [
   { title: "Africa's Indigenous Cosmology", subtitle: "A Research Anthology", year: "2022", publisher: "AHV Press", img: "/9.jpg" },
 ];
 
-export const metadata = { title: "Publications — African Hidden Voices" };
+export const metadata = { title: "Research & Publications — African Hidden Voices" };
 
-export default function Publications() {
+export default function Research() {
   const featured = books[0];
   const catalogue = books.slice(1);
 
@@ -22,9 +22,9 @@ export default function Publications() {
       <header style={{ padding: "84px 40px 70px", borderBottom: "1px solid rgba(110,19,22,.1)" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
           <Reveal>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 20 }}>Publications</div>
-            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(36px,5vw,56px)", lineHeight: 1.08, letterSpacing: "-.01em", margin: "0 0 22px", color: "var(--ahv-ink)", maxWidth: 800 }}>Scholarship that honours the voices.</h1>
-            <p style={{ fontSize: 19, lineHeight: 1.7, color: "#5e4742", maxWidth: 620, margin: 0 }}>The AHV publication series gives academic form to the work of recovery — placing Africa's hidden voices in universities, libraries, and the permanent record.</p>
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 20 }}>Research & Publications</div>
+            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(36px,5vw,56px)", lineHeight: 1.08, letterSpacing: "-.01em", margin: "0 0 22px", color: "var(--ahv-ink)", maxWidth: 800 }}>AIS scholarship, bound and shared.</h1>
+            <p style={{ fontSize: 19, lineHeight: 1.7, color: "#5e4742", maxWidth: 620, margin: 0 }}>AHV's research output spans peer-reviewed monographs, institutional papers, and collaborative publications — each contributing to the establishment of African Indigenous Spirituality as a recognised field of academic study.</p>
           </Reveal>
         </div>
       </header>
@@ -32,7 +32,7 @@ export default function Publications() {
       <section style={{ padding: "90px 40px" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto" }}>
           <Reveal>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 36 }}>Featured</div>
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 36 }}>Featured Publication</div>
           </Reveal>
           <div className="r-two-col" style={{ display: "grid", gridTemplateColumns: ".85fr 1.15fr", gap: 60, alignItems: "center" }}>
             <Reveal>
@@ -49,8 +49,8 @@ export default function Publications() {
               <p style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 20, color: "var(--ahv-crimson)", margin: "0 0 24px" }}>{featured.subtitle}</p>
               <p style={{ fontSize: 17, lineHeight: 1.75, color: "#5e4742", margin: "0 0 32px" }}>Published by Cambridge University Press in 2025 — the first major academic study to trace the lineage of the IMboni tradition from Mantsopa Makhetha through to Imboni Dr. uZwi-Lezwe Radebe. Endorsed by the University of Fort Hare and featured at the 2025 IKS Conference.</p>
               <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-                <Link href="#" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-crimson)", color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "16px 28px", borderRadius: 999 }}>Order Book <ArrowRight size={16} /></Link>
-                <Link href="#" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "var(--ahv-crimson)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, padding: "16px 24px", border: "1.5px solid var(--ahv-crimson)", borderRadius: 999 }}>Read excerpt</Link>
+                <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-crimson)", color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "16px 28px", borderRadius: 999 }}>Request a Copy <ArrowRight size={16} /></Link>
+                <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "var(--ahv-crimson)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, padding: "16px 24px", border: "1.5px solid var(--ahv-crimson)", borderRadius: 999 }}>Research Enquiry</Link>
               </div>
             </Reveal>
           </div>
@@ -95,7 +95,7 @@ export default function Publications() {
         <Reveal>
           <div style={{ maxWidth: 680, margin: "0 auto" }}>
             <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(28px,4vw,40px)", lineHeight: 1.12, margin: "0 0 20px", color: "var(--ahv-ink)" }}>Collaborate with AHV research.</h2>
-            <p style={{ fontSize: 18, lineHeight: 1.7, color: "#5e4742", margin: "0 0 34px" }}>We welcome partnerships with universities, academic publishers, and independent researchers.</p>
+            <p style={{ fontSize: 18, lineHeight: 1.7, color: "#5e4742", margin: "0 0 34px" }}>We welcome partnerships with universities, academic publishers, and independent researchers. Submit a proposal or request access to our research archive.</p>
             <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-crimson)", color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "17px 30px", borderRadius: 999 }}>Start a Conversation <ArrowRight size={16} /></Link>
           </div>
         </Reveal>

@@ -33,9 +33,9 @@ export default function Contact() {
       <header style={{ padding: "84px 40px 70px", borderBottom: "1px solid rgba(110,19,22,.1)" }}>
         <div style={{ maxWidth: 1080, margin: "0 auto" }}>
           <Reveal>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 20 }}>Contact</div>
-            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(36px,5vw,56px)", lineHeight: 1.08, letterSpacing: "-.01em", margin: "0 0 22px", color: "var(--ahv-ink)", maxWidth: 760 }}>Open the dialogue.</h1>
-            <p style={{ fontSize: 19, lineHeight: 1.7, color: "#5e4742", maxWidth: 600, margin: 0 }}>Whether you are a researcher, institution, or someone carrying knowledge of a hidden voice — we want to hear from you.</p>
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 12.5, fontWeight: 600, letterSpacing: ".22em", textTransform: "uppercase", color: "var(--ahv-crimson)", marginBottom: 20 }}>Collaborate</div>
+            <h1 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(36px,5vw,56px)", lineHeight: 1.08, letterSpacing: "-.01em", margin: "0 0 22px", color: "var(--ahv-ink)", maxWidth: 760 }}>Collaborate with AHV.</h1>
+            <p style={{ fontSize: 19, lineHeight: 1.7, color: "#5e4742", maxWidth: 600, margin: 0 }}>Whether you are a university, research body, cultural institution, or individual scholar — we welcome proposals for partnership, academic collaboration, and institutional engagement in the study of African Indigenous Spirituality.</p>
           </Reveal>
         </div>
       </header>

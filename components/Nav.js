@@ -9,9 +9,9 @@ const links = [
   { label: "About", href: "/about" },
   { label: "The Imboni", href: "/imboni" },
   { label: "The Archive", href: "/archive" },
+  { label: "Areas of Study", href: "/areas-of-study" },
+  { label: "Research", href: "/research" },
   { label: "Podcast", href: "/podcast" },
-  { label: "Publications", href: "/publications" },
-  { label: "Events", href: "/events" },
 ];
 
 export default function Nav() {
@@ -48,7 +48,7 @@ export default function Nav() {
             </Link>
           ))}
           <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, border: `1.5px solid ${isHome && !scrolled ? fg : "var(--ahv-crimson)"}`, color: isHome && !scrolled ? fg : "var(--ahv-crimson)", padding: "9px 18px", borderRadius: 999, letterSpacing: ".06em", textTransform: "uppercase", fontSize: 12, fontWeight: 700 }}>
-            Get Involved <ArrowRight size={14} strokeWidth={2} />
+            Collaborate <ArrowRight size={14} strokeWidth={2} />
           </Link>
         </div>
 
@@ -62,7 +62,7 @@ export default function Nav() {
           {links.map(({ label, href }) => (
             <Link key={href} href={href} onClick={() => setMenuOpen(false)} style={{ padding: "13px 4px", borderBottom: "1px solid rgba(110,19,22,.1)", color: pathname === href ? "var(--ahv-crimson)" : "inherit" }}>{label}</Link>
           ))}
-          <Link href="/contact" onClick={() => setMenuOpen(false)} style={{ marginTop: 12, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, background: "var(--ahv-crimson)", color: "var(--ahv-cream)", padding: 14, borderRadius: 999, textTransform: "uppercase", fontSize: 13, letterSpacing: ".06em" }}>Get Involved</Link>
+          <Link href="/contact" onClick={() => setMenuOpen(false)} style={{ marginTop: 12, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, background: "var(--ahv-crimson)", color: "var(--ahv-cream)", padding: 14, borderRadius: 999, textTransform: "uppercase", fontSize: 13, letterSpacing: ".06em" }}>Collaborate</Link>
         </div>
       )}
     </>
