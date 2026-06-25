@@ -10,7 +10,7 @@ const lineage = [
 
 const honours = [
   { year: "2025", title: "Honorary Doctorate, New York", note: "Conferred by the HJ International Graduate School for Peace and Public Leadership." },
-  { year: "2025", title: "Cambridge University Press", note: "Subject of a scholarly book on the revival of African Indigenous Spirituality." },
+  { year: "2025", title: "Published Scholar", note: "Subject of a scholarly book on the revival of African Indigenous Spirituality." },
   { year: "2025", title: "Fort Hare Keynote", note: "Delivered the closing keynote at the Indigenous Knowledge Systems Conference." },
 ];
 

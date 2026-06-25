@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
 const books = [
-  { title: "Restoring Africa's Spiritual Identity", subtitle: "The IMboni Tradition in Southern Africa", year: "2025", publisher: "Cambridge University Press", featured: true, img: "/cambridge.jpg" },
+  { title: "Restoring Africa's Spiritual Identity", subtitle: "The IMboni Tradition in Southern Africa", year: "2025", publisher: "AHV Press", featured: true, img: "/cambridge.jpg" },
   { title: "The Hidden Prophets of the Congo", subtitle: "From Kimbangu to the Present", year: "2024", publisher: "AHV Press", img: "/Untitled-22.jpg" },
   { title: "Mantsopa: A Life of Vision", subtitle: "Documenting Lesotho's Prophetic Heritage", year: "2024", publisher: "AHV Press", img: "/c4copy.jpg" },
   { title: "Spiritual Authority and African Governance", subtitle: "IImboni as National Advisors", year: "2023", publisher: "AHV Press", img: "/g6.jpg" },
@@ -47,7 +47,7 @@ export default function Research() {
               <div style={{ display: "inline-flex", background: "var(--ahv-gold-band)", borderRadius: 999, padding: "7px 16px", fontFamily: "var(--font-hanken)", fontSize: 12, fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--ahv-oxblood-deep)", marginBottom: 22 }}>{featured.publisher}</div>
               <h2 style={{ fontFamily: "var(--font-spectral)", fontWeight: 500, fontSize: "clamp(24px,3.5vw,38px)", lineHeight: 1.1, margin: "0 0 10px", color: "var(--ahv-ink)" }}>{featured.title}</h2>
               <p style={{ fontFamily: "var(--font-spectral)", fontStyle: "italic", fontSize: 20, color: "var(--ahv-crimson)", margin: "0 0 24px" }}>{featured.subtitle}</p>
-              <p style={{ fontSize: 17, lineHeight: 1.75, color: "#5e4742", margin: "0 0 32px" }}>Published by Cambridge University Press in 2025 — the first major academic study to trace the lineage of the IMboni tradition from Mantsopa Makhetha through to Imboni Dr. uZwi-Lezwe Radebe. Endorsed by the University of Fort Hare and featured at the 2025 IKS Conference.</p>
+              <p style={{ fontSize: 17, lineHeight: 1.75, color: "#5e4742", margin: "0 0 32px" }}>The first major academic study to trace the lineage of the IMboni tradition from Mantsopa Makhetha through to Imboni Dr. uZwi-Lezwe Radebe. Endorsed by the University of Fort Hare and featured at the 2025 IKS Conference.</p>
               <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
                 <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "var(--ahv-crimson)", color: "var(--ahv-cream)", fontFamily: "var(--font-hanken)", fontWeight: 700, fontSize: 14, letterSpacing: ".04em", padding: "16px 28px", borderRadius: 999 }}>Request a Copy <ArrowRight size={16} /></Link>
                 <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "var(--ahv-crimson)", fontFamily: "var(--font-hanken)", fontWeight: 600, fontSize: 14, padding: "16px 24px", border: "1.5px solid var(--ahv-crimson)", borderRadius: 999 }}>Research Enquiry</Link>
