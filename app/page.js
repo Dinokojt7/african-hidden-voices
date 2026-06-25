@@ -25,27 +25,27 @@ function NewsletterStrip() {
   }
 
   return (
-    <section style={{ background: "var(--ahv-red)", borderBottom: "4px solid var(--ahv-gold)", padding: "32px 40px" }}>
-      <div style={{ maxWidth: 1240, margin: "0 auto", display: "flex", alignItems: "center", gap: 28, flexWrap: "wrap" }}>
+    <section style={{ background: "var(--ahv-red)", borderBottom: "4px solid var(--ahv-gold)", padding: "28px 24px" }}>
+      <div style={{ maxWidth: 1240, margin: "0 auto", display: "flex", alignItems: "center", gap: 24, flexWrap: "wrap" }}>
         {/* Icon + copy */}
-        <div style={{ display: "flex", alignItems: "center", gap: 14, flex: "0 0 auto" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 14, flex: "1 1 240px", minWidth: 0 }}>
           <div style={{ width: 42, height: 42, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <Image src="/weekly.svg" alt="" width={42} height={42} style={{ width: 42, height: 42, objectFit: "contain", display: "block" }} />
           </div>
-          <div>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 17, fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>Sign up for our weekly newsletter</div>
-            <div style={{ fontFamily: "var(--font-hanken)", fontSize: 14, color: "rgba(255,255,255,.6)", marginTop: 4 }}>Fresh research delivered Saturday mornings</div>
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: "clamp(14px,3.5vw,17px)", fontWeight: 700, color: "#fff", lineHeight: 1.25 }}>Sign up for our weekly newsletter</div>
+            <div style={{ fontFamily: "var(--font-hanken)", fontSize: "clamp(12px,3vw,14px)", color: "rgba(255,255,255,.6)", marginTop: 4 }}>Fresh research delivered Saturday mornings</div>
           </div>
         </div>
 
-        {/* Divider */}
-        <div style={{ width: 1, height: 36, background: "rgba(255,255,255,.15)", flexShrink: 0 }} className="hidden md:block" />
+        {/* Divider — desktop only */}
+        <div style={{ width: 1, height: 36, background: "rgba(255,255,255,.15)", flexShrink: 0 }} className="hidden lg:block" />
 
         {/* Form */}
         {status === "success" ? (
           <div style={{ fontFamily: "var(--font-hanken)", fontSize: 15, fontWeight: 600, color: "var(--ahv-gold)" }}>You're subscribed. Thank you.</div>
         ) : (
-          <form onSubmit={handleSubmit} style={{ display: "flex", gap: 8, width: 380, flexShrink: 0 }}>
+          <form onSubmit={handleSubmit} style={{ display: "flex", gap: 8, flex: "1 1 260px", maxWidth: 400 }}>
             <input
               type="email" required value={email}
               onChange={(e) => setEmail(e.target.value)}
