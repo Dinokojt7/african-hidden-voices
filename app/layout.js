@@ -1,6 +1,8 @@
 import { Spectral, Cinzel, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import Preheader from "@/components/Preheader";
+import TopicBar from "@/components/TopicBar";
 import Footer from "@/components/Footer";
 
 const spectral = Spectral({
@@ -35,7 +37,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spectral.variable} ${cinzel.variable} ${hanken.variable}`}>
       <body className="min-h-full flex flex-col">
+        <Preheader />
         <Nav />
+        <TopicBar />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

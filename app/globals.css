@@ -1,34 +1,51 @@
 @import "tailwindcss";
 
 @theme {
-  --color-oxblood: #6E1316;
-  --color-oxblood-deep: #420C0F;
-  --color-crimson: #8B1A1D;
-  --color-parchment: #F6EFE2;
-  --color-parchment-2: #ECE0CC;
+  --color-canvas: #FFFFFF;
+  --color-surface: #F7F5F0;
+  --color-surface-2: #EEEAE2;
+  --color-ink: #1A1A1A;
+  --color-ink-soft: #4A4540;
+  --color-muted: #6B7280;
   --color-gold: #C9A24B;
   --color-gold-soft: #E6CF8A;
-  --color-gold-band: #EDDDB2;
-  --color-cream: #F5E7C0;
-  --color-ink: #2A1614;
-  --color-ink-soft: #5E4742;
-  --color-muted: #7A635E;
+  --color-gold-band: #F0E8CC;
+  --color-gold-deep: #A8832A;
+  --color-dark: #111111;
+  --color-dark-2: #1C1C1C;
+  --color-border: #E2DDD4;
+  --color-border-strong: #CEC8BC;
   --font-spectral: 'Spectral', Georgia, serif;
   --font-hanken: 'Hanken Grotesk', sans-serif;
   --font-cinzel: 'Cinzel', serif;
 }
 
 :root {
-  --ahv-oxblood: #6E1316;
-  --ahv-oxblood-deep: #420C0F;
-  --ahv-crimson: #8B1A1D;
-  --ahv-parchment: #F6EFE2;
-  --ahv-parchment-2: #ECE0CC;
-  --ahv-gold: #C9A24B;
-  --ahv-gold-soft: #E6CF8A;
-  --ahv-gold-band: #EDDDB2;
-  --ahv-cream: #F5E7C0;
-  --ahv-ink: #2A1614;
+  --ahv-canvas:        #FFFFFF;
+  --ahv-page:          #E8E4DA;   /* warm gray page bg — cards float on this */
+  --ahv-surface:       #F0EDE6;   /* slightly lighter warm for in-card alt rows */
+  --ahv-surface-2:     #E4E0D6;   /* darker surface, borders, section fills */
+  --ahv-ink:           #111111;
+  --ahv-ink-soft:      #3A3530;
+  --ahv-muted:         #5C5650;
+  --ahv-gold:          #C9A24B;
+  --ahv-gold-soft:     #E6CF8A;
+  --ahv-gold-band:     #F0E8CC;
+  --ahv-gold-deep:     #8C6B1A;
+  --ahv-dark:          #111111;
+  --ahv-dark-2:        #1C1C1C;
+  --ahv-red:           #4A0E11;   /* oxblood maroon — used on dark-bg sections */
+  --ahv-red-deep:      #320A0C;
+  --ahv-border:        #CEC9BE;
+  --ahv-border-strong: #B5AFA3;
+
+  /* legacy aliases */
+  --ahv-oxblood:       #4A0E11;
+  --ahv-oxblood-deep:  #320A0C;
+  --ahv-crimson:       #8C6B1A;
+  --ahv-parchment:     #F0EDE6;
+  --ahv-parchment-2:   #E4E0D6;
+  --ahv-cream:         #F0E8CC;
 }
 
 html {
@@ -38,7 +55,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--ahv-parchment);
+  background: var(--ahv-page);
   color: var(--ahv-ink);
   font-family: 'Spectral', Georgia, serif;
   -webkit-font-smoothing: antialiased;
@@ -46,7 +63,7 @@ body {
 
 ::selection {
   background: var(--ahv-gold);
-  color: var(--ahv-oxblood-deep);
+  color: var(--ahv-dark);
 }
 
 a { color: inherit; text-decoration: none; }
@@ -63,10 +80,8 @@ input, textarea, select { font-family: 'Hanken Grotesk', sans-serif; }
   .r-hide      { display: none !important; }
   .r-reverse   { direction: ltr; }
   .r-reverse > * { direction: ltr; }
-  /* podcast featured card */
   .podcast-featured { flex-direction: column !important; }
   .podcast-featured > div:last-child { width: 100% !important; min-height: 200px !important; }
-  /* nav */
   nav { padding: 10px 20px !important; }
   footer { padding: 48px 20px 32px !important; }
   .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
