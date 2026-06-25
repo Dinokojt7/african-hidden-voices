@@ -1,0 +1,24 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Posts: public read, admin write only
+    match /posts/{postId} {
+      allow read: if resource.data.published == true;
+      allow write: if request.auth != null && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    // Admins: only admins can read the admins collection
+    match /admins/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false; // managed via Firebase console only
+    }
+
+    // Newsletter subscribers: anyone can write their email, only admins can read
+    match /subscribers/{docId} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+  }
+}
